@@ -1,0 +1,26 @@
+{
+  "name": "travelapp",
+  "version": "1.0.0",
+  "description": "node,express,mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node ./seed/seed.js"
+  },
+  "author": "Bogo Tsvetkov",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.14",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.6",
+    "nodemailer": "^6.7.2",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "ndb": "^1.1.5"
+  }
+}

@@ -1,0 +1,615 @@
+[
+  {
+    "tourName": "Bulgaria – Ancient times, Monasteries and Culture",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_1.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_1_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_1_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_1_3.jpg"
+    ],
+    "duration": 8,
+    "price": 590,
+    "summary": "This is a classical journey through all major captivating sites of Bulgaria",
+    "description": "Enjoy a fabulous 8-day cultural trip and all its advantages and benefits of the small group tour. This is a classical journey through all major captivating sites of Bulgaria. Centuries will pass in front of your eyes while exploring museum-villages, ancient monasteries, tombs, sanctuaries and natural phenomena. Besides the guided tours in the cities and tourist sites, you will be able to experience the Bulgarian style of living and mix with the locals and their traditions.",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.681028, 42.6455994],
+        "name": "Nessebar,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.91694, 43.20778],
+        "name": "Varna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.315, 42.87111],
+        "name": "Gabrovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "easy"
+  },
+  {
+    "tourName": "Hiking & culture trek 'The Four Mountains'",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_2.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_2_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_2_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_2_3.jpg"
+    ],
+    "duration": 8,
+    "price": 665,
+    "summary": "We visit some of Bulgaria’s remotest and least-known parts",
+    "description": "A well balanced program with half-day (or shorter) easy to moderate walks, offering more opportunities to visit also culture sites. The stress is on the Rhodope (Rodopi) Mountains (famed birthplace of mythical musician Orpheus), Mount Pirin (Bulgaria’s most beautiful mountain, named after the pagan Slav god Perun), Mount Rila (housing more than 200 glacial lakes and the highest peak on the Balkans – Musala, 2925m) and Mount Vitosha (Bulgaria’s most popular mountain destination due to its close proximity to the capital city of Sofia). We visit some of Bulgaria’s remotest and least-known parts, many of them until recently out of bounds for foreigners, and taste traditional local cuisine and hospitality. Famous sites of cultural importance are also included.",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.35, 42.63333],
+        "name": "Koprivshtitsa,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.39917, 41.7425],
+        "name": "Devin,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.5575, 41.93111],
+        "name": "Haskovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.48778, 41.83778],
+        "name": "Bansko,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.1348985, 42.2715387],
+        "name": "Panichishte,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "tourName": "Bulgaria on budget ",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_3.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_3_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_3_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_3_3.jpg"
+    ],
+    "duration": 5,
+    "price": 310,
+    "summary": "With this intensive itinerary we utilize your time to visit the most important and memorable sites",
+    "description": "From ancient times the people inhabiting the Balkans have been highly susceptible to different cultural and economic influences. Its turbulent history has left varied landscape of local ethnographic specialties, enigmatic antique findings, and unsuspecting huge variety of traditions. With this intensive itinerary we utilize your time to visit the most important and memorable sites in just four full days of sightseeing. There are astonishing experiences ahead of you in a tour especially designed to exceed your expectations.",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "tourName": "Grand tour of Bulgaria",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_4.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_4_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_4_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_4_3.jpg"
+    ],
+    "duration": 12,
+    "price": 842,
+    "summary": "From the mountains to the sea, this journey is a dive into the turbulent history of Bulgaria",
+    "description": "From the mountains to the sea, this journey is a dive into the turbulent history of Bulgaria, its lively traditions and attractive cultural monuments. Passing through a series of sites significant not only for the Bulgarian, but for the humankind civilization, we will understand how a small country on the cross road between Europe and Asia had a remarkable role in shaping nowadays European identity. The itinerary’s aim is in 12 days time to accomplish a lot: acquaint every guest with the most important attractions of the country; to offer firsthand experiences of the great variety of local and national Bulgarian manners; to make an account of today’s social and economic reality; to provide hearty hospitality and taste of Balkan cuisine specialties.",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.35, 42.63333],
+        "name": "Koprivshtitsa,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.315, 42.87111],
+        "name": "Gabrovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.91694, 43.20778],
+        "name": "Varna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.681028, 42.6455994],
+        "name": "Nessebar,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [26.98333, 42.65],
+        "name": "Karnobat,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.27444, 41.55889],
+        "name": "Sandanski,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "tourName": "Bulgaria in the heritage list of UNESCO",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832971/TravelApp/tour_5.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_5_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_5_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_5_3.jpg"
+    ],
+    "duration": 8,
+    "price": 960,
+    "summary": "There are nine sites in Bulgaria under the aegis of UNESCO",
+    "description": "There are nine sites in Bulgaria under the aegis of UNESCO. During this eight-day excursion you will explore Thracian necropolises , ancient cities, Bulgarian medieval and renaissance churches and monasteries.   All of them are supreme achievements not only of Bulgarian, but of the whole human civilization. Whether conscious of this fact or not, tourists favour these sites above all. We will do our best to make you present their value well and to make you proud of them.",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.26028, 44.11861],
+        "name": "Silistra,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [26.92444, 43.27],
+        "name": "Shumen,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.681028, 42.6455994],
+        "name": "Nessebar,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.48778, 41.83778],
+        "name": "Bansko,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "tourName": "Classic tour of Bulgaria",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_6.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_6_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_6_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_6_3.jpg"
+    ],
+    "duration": 7,
+    "price": 780,
+    "summary": "Majestic mountains crossed by valleys steeped in the fragrance of Gallic roses, smiling sandy beaches… Oh yes!",
+    "description": "Majestic mountains crossed by valleys steeped in the fragrance of Gallic roses, vineyards bordering on broad, smiling sandy beaches… Oh yes. This is Bulgaria! Over the centuries this impressive landscape has been the setting for dramatic conflicts and cultural exchanges between East and West. The generous heritage left today to its inhabitants by the Thracians, Ancient Greeks, Goths, Huns, Romans, Slavs, Protobulgarians and Turks is a kaleidoscope of customs, religions and history. Will globalisation erase this unique Bulgarian identity? Will its living traditions turn into a cheap modern commercial side-show? Perhaps. Act now and experience it while you still can! Soon it may be too late. Twelve unforgettable days dedicated to UNESCO sites, sensational archaeological finds, natural wonders, short walks and picturesque landscapes, wine tasting, a great atmosphere and wonderful emotions.",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.35, 42.63333],
+        "name": "Koprivshtitsa,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.70944, 42.88444],
+        "name": "Troyan,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.49194, 42.86667],
+        "name": "Tryavna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.87556, 42.00694],
+        "name": "Asenovgrad,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "tourName": "In the footsteps of the Thracian kings",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832974/TravelApp/tour_7.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_7_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_7_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_7_3.jpg"
+    ],
+    "duration": 9,
+    "price": 895,
+    "summary": "The religious cult of Orpheus and Dionysus was given to the world by the Thracian tribes",
+    "description": "The religious cult of Orpheus and Dionysus was given to the world by the Thracian tribes. Their incorrigible spirit of freedom is reflected in the immortal deeds of Spartacus while their skills in crafting fine jewellery have transcended all national boundaries. Academics continue to uncover more and more sensational facts about their distant and enigmatic world and the reality is even more thrilling than the heroic legends. We know from the classical authors that wherever there are Thracians there is wine – the divine elixir of the gods. During your journey you will be able to taste marvellous Bulgarian wines and relive the ancient past of the Thracians!",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.37083, 41.64],
+        "name": "Kardzhali,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.49194, 42.86667],
+        "name": "Tryavna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.95444, 43.8475],
+        "name": "Ruse,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "easy"
+  },
+  {
+    "tourName": "Along Bulgaria’s mountain and heritage trails",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832973/TravelApp/tour_8.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_8_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_8_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_8_3.jpg"
+    ],
+    "duration": 12,
+    "price": 830,
+    "summary": "Combine the magical charm of Bulgaria’s most beautiful mountains with its renowned heritage sights",
+    "description": "From time immemorial, Bulgarians and Nature have competed in creativity. Do you wish to combine the magical charm of Bulgaria’s most beautiful mountains with its renowned heritage sights? The disciplines are diverse enough: architecture, painting … We leave you, our clients, to judge. For our part, we have prepared a program that includes Bulgaria’s most richly muralled monasteries, remarkable monuments of culture and the arts, towns and villages with centuries-old histories, and natural features such as fearful caves and rambling routes crossing Bulgaria’s idyllic mountains.",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.70944, 42.88444],
+        "name": "Troyan,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.49194, 42.86667],
+        "name": "Tryavna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.39917, 41.7425],
+        "name": "Devin,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.48778, 41.83778],
+        "name": "Bansko,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.27444, 41.55889],
+        "name": "Sandanski,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "tourName": "Rural Bulgaria – Balkan, Rhodopes, Pirin and Rila",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832974/TravelApp/tour_9.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_9_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_9_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_9_3.jpg"
+    ],
+    "duration": 8,
+    "price": 680,
+    "summary": "“Rural Bulgaria” is the best choice you can make to escape in the countryside from the concrete jungle",
+    "description": "“Rural Bulgaria” is the best choice you can make to escape in the countryside from the concrete jungle and the stress of the modern city. Our easy to moderate hiking treks are nicely combined with overnight stays in traditional villages and guesthouses, set in rolling landscapes. Enjoy the stunning panoramas and walking trails of the Balkan, the Rhodopes (Rodopi), Pirin and Rila mountains, exploring them on foot during daytime. While in the evenings you will feel the spirit of a century-old life and sincere hospitality, combined with delicious local cuisine, based on organic food and home-made drinks (wine and fruit brandy among them).",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.35, 42.63333],
+        "name": "Koprivshtitsa,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.39917, 41.7425],
+        "name": "Devin,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.48778, 41.83778],
+        "name": "Bansko,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "tourName": "Visit Mystical Places of Bulgaria",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832974/TravelApp/tour_11.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_11_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_11_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_11_3.jpg"
+    ],
+    "duration": 5,
+    "hidden": true,
+    "price": 480,
+    "summary": "“Visit the very mystical and spiritual places in Bulgaria",
+    "description": "“Mystical Bulgaria” is the best choice you can make to experience something spiritual and transcedental. This is a secret tour, available only to the most proven adventurers",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [26.52417, 43.52667],
+        "name": "Kurdzhali,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.37083, 41.64],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.16306, 43.20611],
+        "name": "Lukovit,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "medium"
+  },
+  {
+    "tourName": "Scary Places of Bulgaria",
+    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832974/TravelApp/tour_10.jpg",
+    "images": [
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_10_1.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_10_2.jpg",
+      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_10_3.jpg"
+    ],
+    "duration": 5,
+    "hidden": true,
+    "price": 480,
+    "summary": "“Visit the haunted places in Bulgaria",
+    "description": "“Scary Bulgaria” is the best choice you can make if you like adrenaline and testing your nerves. We'll take you to some of the haunted hidden places that many have gone, but fewer ....:D Are you up for the challenge? This is a secret tour, available only to the most proven adventurers",
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.94, 42.09],
+        "name": "Ahtopol,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.37083, 41.64],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.18, 42.5],
+        "name": "Panagurishte,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.55, 43.2],
+        "name": "Vratsa,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ],
+    "difficulty": "medium"
+  }
+]

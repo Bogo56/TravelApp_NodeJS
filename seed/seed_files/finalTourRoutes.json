@@ -1,0 +1,521 @@
+[
+  {
+    "tourName": "Tour 1",
+    "destinations": [
+      "Sofia,Bulgaria",
+      "Plovdiv,Bulgaria",
+      "Kazanluk,Bulgaria",
+      "Nessebar,Bulgaria",
+      "Varna,Bulgaria",
+      "Veliko Tarnovo,Bulgaria",
+      "Gabrovo,Bulgaria",
+      "Sofia,Bulgaria"
+    ],
+    "geometry": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.681028, 42.6455994],
+        "name": "Nessebar,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.91694, 43.20778],
+        "name": "Varna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.315, 42.87111],
+        "name": "Gabrovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ]
+  },
+  {
+    "tourName": "Tour 2",
+    "destinations": [
+      "Sofia,Bulgaria",
+      "Koprivshtitsa,Bulgaria",
+      "Devin,Bulgaria",
+      "Haskovo,Bulgaria",
+      "Bansko,Bulgaria",
+      "Panichishte,Bulgaria",
+      "Sofia,Bulgaria"
+    ],
+    "geometry": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.35, 42.63333],
+        "name": "Koprivshtitsa,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.39917, 41.7425],
+        "name": "Devin,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.5575, 41.93111],
+        "name": "Haskovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.48778, 41.83778],
+        "name": "Bansko,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.1348985, 42.2715387],
+        "name": "Panichishte,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ]
+  },
+  {
+    "tourName": "Tour 3",
+    "destinations": [
+      "Sofia,Bulgaria",
+      "Plovdiv,Bulgaria",
+      "Sofia,Bulgaria",
+      "Veliko Tarnovo,Bulgaria",
+      "Sofia,Bulgaria"
+    ],
+    "geometry": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ]
+  },
+  {
+    "tourName": "Tour 4",
+    "destinations": [
+      "Sofia,Bulgaria",
+      "Koprivshtitsa,Bulgaria",
+      "Kazanluk,Bulgaria",
+      "Gabrovo,Bulgaria",
+      "Veliko Tarnovo,Bulgaria",
+      "Varna,Bulgaria",
+      "Nessebar,Bulgaria",
+      "Karnobat,Bulgaria",
+      "Plovdiv,Bulgaria",
+      "Sandanski,Bulgaria",
+      "Sofia,Bulgaria"
+    ],
+    "geometry": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.35, 42.63333],
+        "name": "Koprivshtitsa,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.315, 42.87111],
+        "name": "Gabrovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.91694, 43.20778],
+        "name": "Varna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.681028, 42.6455994],
+        "name": "Nessebar,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [26.98333, 42.65],
+        "name": "Karnobat,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.27444, 41.55889],
+        "name": "Sandanski,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ]
+  },
+  {
+    "tourName": "Tour 5",
+    "destinations": [
+      "Sofia,Bulgaria",
+      "Veliko Tarnovo,Bulgaria",
+      "Silistra,Bulgaria",
+      "Shumen,Bulgaria",
+      "Nessebar,Bulgaria",
+      "Kazanluk,Bulgaria",
+      "Plovdiv,Bulgaria",
+      "Bansko,Bulgaria",
+      "Sofia,Bulgaria"
+    ],
+    "geometry": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.26028, 44.11861],
+        "name": "Silistra,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [26.92444, 43.27],
+        "name": "Shumen,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [27.681028, 42.6455994],
+        "name": "Nessebar,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.48778, 41.83778],
+        "name": "Bansko,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ]
+  },
+  {
+    "tourName": "Tour 6",
+    "destinations": [
+      "Sofia,Bulgaria",
+      "Koprivshtitsa,Bulgaria",
+      "Troyan,Bulgaria",
+      "Veliko Tarnovo,Bulgaria",
+      "Tryavna,Bulgaria",
+      "Kazanluk,Bulgaria",
+      "Plovdiv,Bulgaria",
+      "Asenovgrad,Bulgaria",
+      "Sofia,Bulgaria"
+    ],
+    "geometry": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.35, 42.63333],
+        "name": "Koprivshtitsa,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.70944, 42.88444],
+        "name": "Troyan,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.49194, 42.86667],
+        "name": "Tryavna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.87556, 42.00694],
+        "name": "Asenovgrad,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ]
+  },
+  {
+    "tourName": "Tour 7",
+    "destinations": [
+      "Sofia,Bulgaria",
+      "Plovdiv,Bulgaria",
+      "Kardzhali,Bulgaria",
+      "Plovdiv,Bulgaria",
+      "Tryavna,Bulgaria",
+      "Kazanluk,Bulgaria",
+      "Veliko Tarnovo,Bulgaria",
+      "Ruse,Bulgaria",
+      "Veliko Tarnovo,Bulgaria",
+      "Sofia,Bulgaria"
+    ],
+    "geometry": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.37083, 41.64],
+        "name": "Kardzhali,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.49194, 42.86667],
+        "name": "Tryavna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.95444, 43.8475],
+        "name": "Ruse,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ]
+  },
+  {
+    "tourName": "Tour 8",
+    "destinations": [
+      "Sofia,Bulgaria",
+      "Troyan,Bulgaria",
+      "Veliko Tarnovo,Bulgaria",
+      "Tryavna,Bulgaria",
+      "Veliko Tarnovo,Bulgaria",
+      "Kazanluk,Bulgaria",
+      "Plovdiv,Bulgaria",
+      "Devin,Bulgaria",
+      "Bansko,Bulgaria",
+      "Sandanski,Bulgaria",
+      "Sofia,Bulgaria"
+    ],
+    "geometry": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.70944, 42.88444],
+        "name": "Troyan,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.49194, 42.86667],
+        "name": "Tryavna,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.63167, 43.08222],
+        "name": "Veliko Tarnovo,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.4, 42.61667],
+        "name": "Kazanluk,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.39917, 41.7425],
+        "name": "Devin,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.48778, 41.83778],
+        "name": "Bansko,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.27444, 41.55889],
+        "name": "Sandanski,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ]
+  },
+  {
+    "tourName": "Tour 9",
+    "destinations": [
+      "Sofia,Bulgaria",
+      "Koprivshtitsa,Bulgaria",
+      "Plovdiv,Bulgaria",
+      "Devin,Bulgaria",
+      "Bansko,Bulgaria",
+      "Sofia,Bulgaria"
+    ],
+    "geometry": [
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.35, 42.63333],
+        "name": "Koprivshtitsa,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.74889, 42.14333],
+        "name": "Plovdiv,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [24.39917, 41.7425],
+        "name": "Devin,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.48778, 41.83778],
+        "name": "Bansko,Bulgaria"
+      },
+      {
+        "type": "Point",
+        "coordinates": [23.33333, 42.7],
+        "name": "Sofia,Bulgaria"
+      }
+    ]
+  }
+]

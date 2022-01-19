@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Bogomil Tsvetkov",
+    "email": "cvetkov.bogomil@gmail.com",
+    "role": "admin",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_1.png",
+    "password": "AdminPass"
+  },
+  {
+    "name": "Georgi Ivanov",
+    "email": "georgi@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_2.png",
+    "password": "password"
+  },
+  {
+    "name": "Martin Bachev",
+    "email": "marto@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "",
+    "password": "password"
+  },
+  {
+    "name": "Ivan Rangelov",
+    "email": "ivan@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "",
+    "password": "password"
+  },
+  {
+    "name": "Radin Stoqnov",
+    "email": "radin@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_9.png",
+    "password": "password"
+  },
+  {
+    "name": "Strahil Ivanov",
+    "email": "straho@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_11.png",
+    "password": "password"
+  },
+  {
+    "name": "Teodor Ivanov",
+    "email": "teo@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_8.png",
+    "password": "password"
+  },
+  {
+    "name": "Bojidar Georgiev",
+    "email": "bojo@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_6.pngv",
+    "password": "password"
+  },
+  {
+    "name": "Ognyan Pashov",
+    "email": "ogi@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_4.png",
+    "password": "password"
+  },
+  {
+    "name": "Solomon Isaev",
+    "email": "solomon@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "",
+    "password": "password"
+  },
+  {
+    "name": "Svetoslav Dermendjiev",
+    "email": "sveto@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "",
+    "password": "password"
+  },
+  {
+    "name": "Maria Ivanova",
+    "email": "maria@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "",
+    "password": "password"
+  },
+  {
+    "name": "Elizabet Kostova",
+    "email": "eli@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_3.png",
+    "password": "password"
+  },
+  {
+    "name": "Genoveva Stoilova",
+    "email": "gevi@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_5.png",
+    "password": "password"
+  },
+  {
+    "name": "Elena Mateva",
+    "email": "elena@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_7.png",
+    "password": "password"
+  },
+  {
+    "name": "Katerina Banekova",
+    "email": "kate@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "",
+    "password": "password"
+  },
+  {
+    "name": "Antoaneta Vaneva",
+    "email": "vani@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "",
+    "password": "password"
+  },
+  {
+    "name": "Kalina Vaseva",
+    "email": "kali@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "",
+    "password": "password"
+  },
+  {
+    "name": "Yanka Stoeva",
+    "email": "yanka@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "",
+    "password": "password"
+  },
+  {
+    "name": "Mina Rankova",
+    "email": "mina@example.com",
+    "role": "user",
+    "active": true,
+    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_3.png",
+    "password": "password"
+  }
+]

@@ -1,0 +1,43 @@
+[
+    {
+        "tourName": "Tour 1",
+        "destinations":["Sofia,Bulgaria","Plovdiv,Bulgaria","Kazanluk,Bulgaria","Nessebar,Bulgaria","Varna,Bulgaria","Veliko Tarnovo,Bulgaria","Gabrovo,Bulgaria","Sofia,Bulgaria"]
+
+    },
+    {
+        "tourName": "Tour 2",
+        "destinations":["Sofia,Bulgaria","Koprivshtitsa,Bulgaria","Devin,Bulgaria","Haskovo,Bulgaria","Bansko,Bulgaria","Panichishte,Bulgaria","Sofia,Bulgaria"]
+
+    },
+    {
+        "tourName": "Tour 3",
+        "destinations":["Sofia,Bulgaria","Plovdiv,Bulgaria","Sofia,Bulgaria","Veliko Tarnovo,Bulgaria","Sofia,Bulgaria"]
+
+    },
+    {
+        "tourName": "Tour 4",
+        "destinations":["Sofia,Bulgaria","Koprivshtitsa,Bulgaria","Kazanluk,Bulgaria","Gabrovo,Bulgaria","Veliko Tarnovo,Bulgaria","Varna,Bulgaria","Nessebar,Bulgaria","Karnobat,Bulgaria","Plovdiv,Bulgaria","Sandanski,Bulgaria","Sofia,Bulgaria"]
+
+    },
+    {
+        "tourName": "Tour 5",
+        "destinations":["Sofia,Bulgaria","Veliko Tarnovo,Bulgaria","Silistra,Bulgaria","Shumen,Bulgaria","Nessebar,Bulgaria","Kazanluk,Bulgaria","Plovdiv,Bulgaria","Bansko,Bulgaria","Sofia,Bulgaria"]
+    },
+    {
+        "tourName": "Tour 6",
+        "destinations":["Sofia,Bulgaria","Koprivshtitsa,Bulgaria","Troyan,Bulgaria","Veliko Tarnovo,Bulgaria","Tryavna,Bulgaria","Kazanluk,Bulgaria","Plovdiv,Bulgaria","Asenovgrad,Bulgaria","Sofia,Bulgaria"]
+    },
+    {
+        "tourName": "Tour 7",
+        "destinations":["Sofia,Bulgaria","Plovdiv,Bulgaria","Kardzhali,Bulgaria","Plovdiv,Bulgaria","Tryavna,Bulgaria","Kazanluk,Bulgaria","Veliko Tarnovo,Bulgaria","Ruse,Bulgaria","Veliko Tarnovo,Bulgaria","Sofia,Bulgaria"]
+    },
+    {
+        "tourName": "Tour 8",
+        "destinations":["Sofia,Bulgaria","Troyan,Bulgaria","Veliko Tarnovo,Bulgaria","Tryavna,Bulgaria","Veliko Tarnovo,Bulgaria","Kazanluk,Bulgaria","Plovdiv,Bulgaria","Devin,Bulgaria","Bansko,Bulgaria","Sandanski,Bulgaria","Sofia,Bulgaria"]
+    },
+    {
+        "tourName": "Tour 9",
+        "destinations":["Sofia,Bulgaria","Koprivshtitsa,Bulgaria","Plovdiv,Bulgaria","Devin,Bulgaria","Bansko,Bulgaria","Sofia,Bulgaria"]
+    }
+    
+]
