@@ -51,8 +51,9 @@ const userSchema = new Schema({
       validator: function (val) {
         return this.password === val;
       },
-      msg: "path /confirmPass/ doesn't match or not provided !",
+      msg: "paths /confirmPass and password/ don't match or not provided !",
     },
+    required: true,
   },
   lastChanged: {
     type: Date,
@@ -125,7 +126,7 @@ userSchema.methods.generatePassResetToken = async function () {
   // expire in 10 minutes
   this.resetExpAt = Date.now() + 1000 * 60 * 10;
 
-  this.save();
+  await this.save({ validateBeforeSave: false });
 
   return randToken;
 };

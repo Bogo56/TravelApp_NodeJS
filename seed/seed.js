@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const TourModel = require("../model/tourModel.js");
 const UserModel = require("../model/userModel.js");
+const ReviewModel = require("../model/reviewModel.js");
 const fs = require("fs");
 
 require("dotenv").config({
@@ -30,6 +31,7 @@ async function clearDB() {
   try {
     await TourModel.deleteMany();
     await UserModel.deleteMany();
+    await ReviewModel.deleteMany();
     console.log("DB cleared");
   } catch (err) {
     throw new Error(err.message);
@@ -39,7 +41,7 @@ async function clearDB() {
 async function seedDB() {
   try {
     await TourModel.create(tourData);
-    await UserModel.create(userData);
+    await UserModel.create(userData, { validateBeforeSave: false });
     console.log("Database has been seeded Successfully");
   } catch (err) {
     throw new Error(err.message);

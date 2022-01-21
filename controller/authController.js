@@ -3,6 +3,7 @@ const UserModel = require("../model/userModel.js");
 const catchAsyncError = require("../errorHandlers/catchAsync.js");
 const AppError = require("../errors/customErrors.js");
 const sendEmail = require("../utils/emails.js");
+const filterObj = require("../utils/reqUtils.js");
 
 const signToken = (id) => {
   const token = jwt.sign({ id: id }, process.env.JWT_SECRET, {
@@ -15,6 +16,26 @@ const signToken = (id) => {
 const verifyToken = (token) => {
   const decoded = jwt.verify(token, process.env.JWT_SECRET);
   return decoded;
+};
+
+const sendToken = function (status, result, token, res) {
+  const cookieOptions = {
+    expires: new Date(
+      Date.now() +
+        process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+    ),
+    httpOnly: true,
+    secure: false,
+  };
+  if (process.env.NODE_ENV === "production")
+    cookieOptions.secure = true;
+
+  res.cookie("jwt", token, cookieOptions);
+
+  return res.status(status).json({
+    status: "Success",
+    result: result,
+  });
 };
 
 // Protecting routes with JWT token verification
@@ -70,38 +91,31 @@ exports.restrictTo = (...roles) => {
 };
 
 exports.signUp = catchAsyncError(async function (req, res, next) {
-  const userData = {
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-    confirmPass: req.body.confirmPass,
-  };
+  const userData = filterObj(
+    req.body,
+    "email",
+    "name",
+    "password",
+    "confirmPass"
+  );
 
   const newUser = await UserModel.create(userData);
   const token = signToken(newUser.id);
 
-  res.status(201).json({
-    status: "Success",
-    time: req.time,
-    data: token,
-  });
+  sendToken(201, userData.email, token, res);
 });
 
 exports.logIn = catchAsyncError(async function (req, res) {
   // 1. Check user credentials
-  const { email, password } = req.body;
-  const user = await UserModel.checkUser({ email, password });
+  const userData = filterObj(req.body, "email", "password");
+  const user = await UserModel.checkUser(userData);
 
   if (!user) throw new AppError("Invalid Username or Password", 401);
 
   // 2. Generate Token
   const token = signToken(user.id);
 
-  res.status(201).json({
-    status: "Success",
-    user: email,
-    token: token,
-  });
+  sendToken(201, userData.email, token, res);
 });
 
 exports.forgetPass = catchAsyncError(async function (req, res, next) {
@@ -121,11 +135,12 @@ exports.forgetPass = catchAsyncError(async function (req, res, next) {
 
   sendEmail(data);
 
-  res.status(201).json({
-    status: "Success",
-    result:
-      "A restoration link has been send to your email! (valid for 10 min)",
-  });
+  sendToken(
+    201,
+    "A restoration link has been send to your email! (valid for 10 min)",
+    token,
+    res
+  );
 });
 
 exports.resetPass = catchAsyncError(async function (req, res, next) {
@@ -142,7 +157,7 @@ exports.resetPass = catchAsyncError(async function (req, res, next) {
 
   // 3.Validate and change new Password
   user.password = req.body.password;
-  user.confirmPass = req.body.confirmPass || "";
+  user.confirmPass = req.body.confirmPass;
   user.resetExpAt = Date.now();
 
   await user.save();
@@ -150,9 +165,28 @@ exports.resetPass = catchAsyncError(async function (req, res, next) {
   // 4.Generate new jwt token
   const token = signToken(user.id);
 
-  res.status(200).json({
-    status: "Success",
-    result: "Password reset successfull",
-    token: token,
+  sendToken(201, "Password Updated", token, res);
+});
+
+exports.updateLoggedUserPass = catchAsyncError(async function (
+  req,
+  res
+) {
+  // 1.Confirm old password
+  const user = await UserModel.checkUser({
+    email: req.user.email,
+    password: req.body.oldPass,
   });
+
+  if (!user) throw new AppError("Wrong Password", 401);
+
+  // 2.Validate new Password and update
+  user.password = req.body.password;
+  user.confirmPass = req.body.confirmPass;
+  await user.save();
+
+  // 3.Generate new token
+  const token = signToken(user.id);
+
+  sendToken(201, "Password Updated", token, res);
 });

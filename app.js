@@ -3,28 +3,54 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const AppError = require("./errors/customErrors.js");
 const globalErrorHandler = require("./errorHandlers/globalErrHandler.js");
+const rateLimit = require("express-rate-limit");
+const sanitizeInput = require("express-mongo-sanitize");
+const xss = require("xss-clean");
+const helmet = require("helmet");
 
-const toursRouter = require("./routes/tourRoutes");
-const userRouter = require("./routes/userRoutes");
+const toursRouter = require("./routes/tourRoutes.js");
+const userRouter = require("./routes/userRoutes.js");
+const reviewRouter = require("./routes/reviewRoutes.js");
 
 const app = express();
 
-// MIDDLEWARE
+// 1.GLOBAL MIDDLEWARES
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-app.use(bodyParser.json());
+// Set security HTTP headers
+app.use(helmet());
 
+// Limit API requests per hour from same IP
+const limiter = rateLimit({
+  max: 100,
+  windowMs: 60 * 60 * 100,
+  message:
+    "Hourly request rate limit exceeded! Come back in an hour!",
+});
+app.use("/api", limiter);
+
+// Reading data from request body
+app.use(bodyParser.json({ limit: "10kb" }));
+
+// Protecting against noSQL db injections
+app.use(sanitizeInput());
+
+// Protection against XSS
+app.use(xss());
+
+// Record time of request - test middleware
 app.use((req, res, next) => {
   const curTime = new Date().toISOString();
   req.time = curTime;
   next();
 });
 
-// ROUTES
+// 2.ROUTES
 app.use("/api/v1/tours", toursRouter);
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/reviews", reviewRouter);
 
 app.all("*", (req, res, next) => {
   const err = new AppError("Could not find the resource specified");
