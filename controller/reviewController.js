@@ -1,26 +1,25 @@
 const reviewModel = require("../model/reviewModel.js");
 const catchAsyncError = require("../errorHandlers/catchAsync.js");
+const factory = require("./handlerFactories.js");
 
-exports.getAllReviews = async function (req, res, next) {
-  const reviews = await reviewModel.find();
+exports.getAllReviews = factory.getAll(
+  reviewModel,
+  (useParams = ["tour"])
+);
 
-  res.status(200).json({
-    status: "Success",
-    results: reviews.length,
-    data: reviews,
-  });
+exports.checkForParams = (req, res, next) => {
+  if (!req.body.tour) req.body.tour = req.params.tour;
+  if (!req.body.user) req.body.user = req.user.id;
+  next();
 };
 
-exports.createReview = catchAsyncError(async function (
-  req,
-  res,
-  next
-) {
-  const review = await reviewModel.create(req.body);
+exports.createReview = factory.createOne(reviewModel);
 
-  res.status(200).json({
-    status: "Success",
-    time: req.time,
-    data: review,
-  });
-});
+exports.getReview = factory.getOne(reviewModel);
+
+exports.updateReview = factory.updateOne(
+  reviewModel,
+  (filterData = ["rating", "text"])
+);
+
+exports.deleteReview = factory.deleteOne(reviewModel);

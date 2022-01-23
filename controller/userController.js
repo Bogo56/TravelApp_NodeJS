@@ -2,6 +2,12 @@ const UserModel = require("../model/userModel.js");
 const catchAsyncError = require("../errorHandlers/catchAsync.js");
 const filterObj = require("../utils/reqUtils.js");
 const AppError = require("../errors/customErrors.js");
+const factory = require("./handlerFactories.js");
+
+exports.setLoggedUser = (req, res, next) => {
+  if (req.user) req.params.id = req.user.id;
+  next();
+};
 
 exports.updateLoggedUserInfo = catchAsyncError(async function (
   req,
@@ -35,62 +41,12 @@ exports.updateLoggedUserInfo = catchAsyncError(async function (
   });
 });
 
-exports.getAllUsers = catchAsyncError(async function (req, res) {
-  const result = await UserModel.find();
+exports.deactivateLoggedUser = catchAsyncError(async function (
+  req,
+  res
+) {
+  const id = req.user.id;
 
-  res.status(201).json({
-    status: "Success",
-    number: result.length,
-    data: result,
-  });
-});
-
-exports.createUser = catchAsyncError(async function (req, res) {
-  const userData = filterObj(
-    req.body,
-    "email",
-    "name",
-    "photo",
-    "password",
-    "confirmPass"
-  );
-
-  const result = await UserModel.create(userData);
-
-  res.status(201).json({
-    status: "Success",
-    time: req.time,
-    data: result,
-  });
-});
-
-exports.getUser = catchAsyncError(async function (req, res) {
-  const id = req.params.id;
-  const result = await UserModel.findById(id);
-
-  res.status(201).json({
-    status: "Success",
-    data: result,
-  });
-});
-
-exports.updateUser = catchAsyncError(async function (req, res) {
-  const id = req.params.id;
-  const updateData = req.body;
-
-  const result = await UserModel.findByIdAndUpdate(id, updateData, {
-    new: true,
-    runValidators: true,
-  });
-
-  res.status(201).json({
-    status: "Success",
-    data: result,
-  });
-});
-
-exports.deleteUser = catchAsyncError(async function (req, res) {
-  const id = req.params.id;
   await UserModel.findByIdAndUpdate(id, { active: false });
 
   res.status(200).json({
@@ -99,3 +55,19 @@ exports.deleteUser = catchAsyncError(async function (req, res) {
     data: null,
   });
 });
+
+exports.getAllUsers = factory.getAll(UserModel);
+
+exports.createUser = factory.createOne(
+  UserModel,
+  (filterData = ["email", "name", "photo", "password", "confirmPass"])
+);
+
+exports.getUser = factory.getOne(UserModel);
+
+exports.updateUser = factory.updateOne(
+  UserModel,
+  (filterData = ["email", "name", "photo"])
+);
+
+exports.deleteUser = factory.deleteOne(UserModel);

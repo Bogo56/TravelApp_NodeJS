@@ -1,6 +1,6 @@
 const TourModel = require("../model/tourModel.js");
-const SearchFeatures = require("../utils/apiEnhancements.js");
 const catchAsyncError = require("../errorHandlers/catchAsync.js");
+const factory = require("./handlerFactories.js");
 
 exports.topFiveTours = catchAsyncError(async function (
   req,
@@ -15,67 +15,15 @@ exports.topFiveTours = catchAsyncError(async function (
   next();
 });
 
-exports.getAllTours = catchAsyncError(async function (req, res) {
-  const queryStr = req.query;
-  const result = await new SearchFeatures(TourModel.find(), queryStr)
-    .filter()
-    .limitFields()
-    .paginate()
-    .sort()
-    .execute();
+exports.getAllTours = factory.getAll(TourModel);
 
-  // SEND RESPONSE
-  res.status(200).json({
-    status: "Success",
-    time: req.time,
-    results: result.length,
-    data: result,
-  });
-});
+exports.addNewTour = factory.createOne(TourModel);
 
-exports.addNewTour = catchAsyncError(async function (req, res) {
-  const result = await TourModel.create(req.body);
-  res.status(201).json({
-    status: "Success",
-    time: req.time,
-    data: result,
-  });
-});
+exports.getTour = factory.getOne(
+  TourModel,
+  (populateOpts = { path: "reviews" })
+);
 
-exports.getTour = catchAsyncError(async function (req, res) {
-  const id = req.params.id;
+exports.updateTour = factory.updateOne(TourModel);
 
-  const result = await TourModel.findById(id);
-  res.status(200).json({
-    status: "Success",
-    time: req.time,
-    data: result,
-  });
-});
-
-exports.updateTour = catchAsyncError(async function (req, res) {
-  const id = req.params.id;
-  const info = req.body;
-
-  const result = await TourModel.findByIdAndUpdate(id, info, {
-    new: true,
-    runValidators: true,
-  });
-
-  res.status(200).json({
-    status: result ? "Success" : "Failed",
-    time: req.time,
-    data: result || "No such ID",
-  });
-});
-
-exports.deleteTour = catchAsyncError(async function (req, res) {
-  const id = req.params.id;
-
-  await TourModel.findByIdAndDelete(id);
-  res.status(200).json({
-    status: "Success",
-    time: req.time,
-    data: null,
-  });
-});
+exports.deleteTour = factory.deleteOne(TourModel);
