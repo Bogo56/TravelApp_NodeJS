@@ -8,6 +8,7 @@ const rateLimit = require("express-rate-limit");
 const sanitizeInput = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const helmet = require("helmet");
+const engine = require("ejs-mate");
 
 const viewRouter = require("./routes/viewRoutes.js");
 const toursRouter = require("./routes/tourRoutes.js");
@@ -17,6 +18,7 @@ const reviewRouter = require("./routes/reviewRoutes.js");
 const app = express();
 
 // Set the template engine
+app.engine("ejs", engine);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 

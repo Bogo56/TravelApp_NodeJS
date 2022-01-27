@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
-</head>
-<body>
+<% layout("./layout/boilerplate") %>
 
-    <container class="content__wrapper">
-        <header>
-            <h3 class="header__title">BulTravel</h3>
-            <img class="header__logo" src="/img/logo_small.png">
-            <div class="header__nav">
-                <button id="login" class="btn header--btn">LOG IN</button>
-                <button id="signup" class="btn header--btn">SIGN UP</button>
-            </div>
-        </header>
-
+    
         <section class="content__main">
             <div class = "cards_list--wrapper">
 
@@ -52,7 +33,7 @@
                     <div class = "card__footer">
                         <div class="card__footer--wrapper">
                             <p class= "card__footer--price"><span class="price--number footer__span--num">€105</span> per Person</p>
-                            <p class= "card__footer--rating"><span class="rating--number footer__span--num">4.5</span> rating(7)</p>
+                            <p class= "card__footer--rating"><span class="rating--number footer__span--num">4.5</span> rating (7)</p>
                             <button class = "btn card__footer--btn">DETAILS</button>
                         </div>
                     </div>
@@ -128,32 +109,4 @@
                
             </div>            
         </section>
-    </container>
-    <footer>
-        <div class="footer__logo--wrapper">
-            <img class="footer__logo" src="/img/logo_small.png">
-            <h3 class="footer__title">BulTravel</h3>
-        </div>
-        <div class="footer__nav">
-            <ul class = "footer__nav--list">
-                <li class = "footer__nav--item">
-                    <a>About Us</a>
-                </li>
-                <li class = "footer__nav--item">
-                    <a>Become a guide</a>
-                </li>
-                <li class = "footer__nav--item">
-                    <a>Careers</a>
-                </li>
-                <li class = "footer__nav--item">
-                    <a>Contacts</a>
-                </li>
-                <li class = "footer__nav--item">
-                    <a>Download app</a>
-                </li>
-            </ul>
-           <div class="autor_signature">© 2022 by Bogomil Tsvetkov</div> 
-        </div>
-    </footer>
-</body>
-</html>
+    

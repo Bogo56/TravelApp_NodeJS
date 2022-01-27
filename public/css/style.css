@@ -4,10 +4,6 @@ body {
   background-color: rgb(57, 57, 57);
 }
 
-.content__wrapper {
-  min-height: 100vh;
-}
-
 header {
   display: flex;
   flex-direction: row;
@@ -41,12 +37,16 @@ button {
 #login {
   border: none;
 }
+
+.content__main--wrapper {
+  background-color: rgb(30, 29, 34);
+  min-height: 35rem;
+}
+
 .content__main {
   display: flex;
-  background-color: rgb(30, 29, 34);
   justify-content: center;
-  padding: 6rem 18rem;
-  min-height: 35rem;
+  padding: 6rem 4rem;
 }
 
 .cards_list--wrapper {
@@ -223,7 +223,4 @@ ul {
 li {
   display: inline;
   margin-left: 0.7rem;
-}
-
-.autor_signature {
 }
