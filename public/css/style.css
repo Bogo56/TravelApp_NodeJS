@@ -1,0 +1,229 @@
+body {
+  margin: 4rem;
+  font-family: "Mochiy Pop P One", sans-serif;
+  background-color: rgb(57, 57, 57);
+}
+
+.content__wrapper {
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  background-color: rgb(49, 49, 49);
+  color: rgb(238, 235, 235);
+  padding: 0.5rem 3rem;
+}
+
+.header__logo {
+  transform: scale(0.3);
+}
+.header__nav {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid rgb(253, 253, 253);
+  border-radius: 30px;
+  color: inherit;
+  font-size: 0.9rem;
+  font-family: inherit;
+  padding: 0.8rem 1.5rem;
+}
+
+#login {
+  border: none;
+}
+.content__main {
+  display: flex;
+  background-color: rgb(30, 29, 34);
+  justify-content: center;
+  padding: 6rem 18rem;
+  min-height: 35rem;
+}
+
+.cards_list--wrapper {
+  display: flex;
+  gap: 4.4rem;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 22rem;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card__img {
+  width: 28rem;
+  border-radius: 0 0 0 50%;
+  z-index: 5;
+}
+.card__heading {
+  position: absolute;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 2.1rem;
+  top: 10rem;
+  right: 1rem;
+  z-index: 13;
+  width: 15rem;
+}
+
+.card__heading--span {
+  font-weight: 400;
+  font-size: 1.6rem;
+  padding: 0.3rem;
+  background-image: linear-gradient(
+    160deg,
+    rgba(248, 178, 73, 0.883) 30%,
+    rgba(248, 172, 8, 0.918) 100%
+  );
+  -webkit-box-decoration-break: clone;
+}
+
+.card__body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: rgb(243, 239, 234);
+  width: 100%;
+  padding-left: 4rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card__body:before {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  width: 110%;
+  height: 4.1rem;
+  right: 1rem;
+  transform: translateY(-96%) rotate(1deg);
+}
+
+.card__difficulty {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.card__summary {
+  font-size: 1rem;
+  font-weight: 300;
+  width: 86%;
+}
+
+.card__info {
+  margin: 1.5rem 0rem;
+}
+
+.card__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.card__info--item {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  align-items: center;
+}
+
+.info__item--img {
+  width: 1rem;
+}
+
+.card__footer {
+  width: 100%;
+  background-color: rgb(57, 57, 57);
+  color: white;
+  padding: 1.5rem 0rem;
+}
+
+.card__footer--wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  padding: 0 2rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  column-gap: 4rem;
+}
+
+.card__footer--wrapper p {
+  margin: 0.5rem 0;
+}
+
+.footer__span--num {
+  font-weight: 600;
+}
+
+.card__footer--btn {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  width: 7rem;
+  font-size: 1rem;
+  background-image: linear-gradient(
+    120deg,
+    rgb(248, 172, 58) 30%,
+    rgb(248, 172, 8) 100%
+  );
+  border: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: rgb(30, 29, 34);
+  padding: 3rem 5rem;
+}
+
+.footer__logo--wrapper {
+  display: flex;
+}
+
+.footer__logo {
+  width: 8rem;
+  margin-right: 2rem;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  margin-left: 0.7rem;
+}
+
+.autor_signature {
+}

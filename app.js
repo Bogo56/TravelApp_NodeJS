@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const path = require("path");
 const bodyParser = require("body-parser");
 const AppError = require("./errors/customErrors.js");
 const globalErrorHandler = require("./errorHandlers/globalErrHandler.js");
@@ -8,11 +9,18 @@ const sanitizeInput = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const helmet = require("helmet");
 
+const viewRouter = require("./routes/viewRoutes.js");
 const toursRouter = require("./routes/tourRoutes.js");
 const userRouter = require("./routes/userRoutes.js");
 const reviewRouter = require("./routes/reviewRoutes.js");
 
 const app = express();
+
+// Set the template engine
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+
+app.use(express.static(path.join(__dirname, "public")));
 
 // 1.GLOBAL MIDDLEWARES
 if (process.env.NODE_ENV === "development") {
@@ -20,7 +28,16 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // Set security HTTP headers
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+        "img-src": ["'self'", "data: https:"],
+      },
+    },
+  })
+);
 
 // Limit API requests per hour from same IP
 const limiter = rateLimit({
@@ -48,6 +65,7 @@ app.use((req, res, next) => {
 });
 
 // 2.ROUTES
+app.use("/", viewRouter);
 app.use("/api/v1/tours", toursRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/reviews", reviewRouter);
