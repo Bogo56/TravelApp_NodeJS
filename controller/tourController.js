@@ -19,10 +19,9 @@ exports.getAllTours = factory.getAll(TourModel);
 
 exports.addNewTour = factory.createOne(TourModel);
 
-exports.getTour = factory.getOne(
-  TourModel,
-  (populateOpts = { path: "reviews" })
-);
+exports.getTour = factory.getOne(TourModel, {
+  populateOpts: { path: "reviews" },
+});
 
 exports.updateTour = factory.updateOne(TourModel);
 

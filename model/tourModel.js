@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const { format } = require("date-and-time");
 
 const tourSchema = new Schema(
   {
@@ -7,6 +8,7 @@ const tourSchema = new Schema(
       type: String,
       required: [true, "Tour must have a name"],
       unique: true,
+      max: [50, "Tour name can be maximum 100 characters"],
     },
     imageCover: {
       type: String,
@@ -18,6 +20,11 @@ const tourSchema = new Schema(
       type: [String],
       lowercase: true,
       trim: true,
+      required: [true, "Tour must have images"],
+      validate: {
+        validator: (arr) => Array.isArray(arr) && arr.length === 3,
+        msg: "You must add exactly 3 image urls",
+      },
     },
     duration: {
       type: Number,
@@ -31,6 +38,7 @@ const tourSchema = new Schema(
       type: String,
       trim: true,
       default: "This is an amazing tour. Don't Miss",
+      max: [100, "Summary can be maximum 100 characters"],
     },
     description: {
       type: String,
@@ -92,12 +100,22 @@ const tourSchema = new Schema(
       type: Number,
       default: 0,
     },
-    guides: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "User",
+    guides: {
+      type: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "User",
+        },
+      ],
+      validate: {
+        validator: (arr) => Array.isArray(arr) && arr.length > 1,
+        msg: "Tour must have at least 2 guides",
       },
-    ],
+    },
+    nextDate: {
+      type: Date,
+      default: Date.now() + 1000 * 60 * 60 * 24 * 30 * 10,
+    },
   },
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
@@ -119,6 +137,10 @@ tourSchema.virtual("reviews", {
   localField: "_id",
   foreignField: "tour",
 });
+
+tourSchema.methods.getFormatedDate = function () {
+  return format(this.nextDate, "D MMM YYYY");
+};
 
 const Tour = mongoose.model("Tour", tourSchema);
 

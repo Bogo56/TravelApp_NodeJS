@@ -115,7 +115,7 @@ exports.logIn = catchAsyncError(async function (req, res) {
   // 2. Generate Token
   const token = signToken(user.id);
 
-  sendToken(201, userData.email, token, res);
+  sendToken(200, userData.email, token, res);
 });
 
 exports.forgetPass = catchAsyncError(async function (req, res, next) {

@@ -58,16 +58,14 @@ exports.deactivateLoggedUser = catchAsyncError(async function (
 
 exports.getAllUsers = factory.getAll(UserModel);
 
-exports.createUser = factory.createOne(
-  UserModel,
-  (filterData = ["email", "name", "photo", "password", "confirmPass"])
-);
+exports.createUser = factory.createOne(UserModel, {
+  filterData: ["email", "name", "photo", "password", "confirmPass"],
+});
 
 exports.getUser = factory.getOne(UserModel);
 
-exports.updateUser = factory.updateOne(
-  UserModel,
-  (filterData = ["email", "name", "photo"])
-);
+exports.updateUser = factory.updateOne(UserModel, {
+  filterData: ["email", "name", "photo"],
+});
 
 exports.deleteUser = factory.deleteOne(UserModel);

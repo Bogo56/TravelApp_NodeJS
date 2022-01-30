@@ -5,107 +5,44 @@
             <div class = "cards_list--wrapper">
 
                 <!-- CARDS TEMPLATE -->
-                <div class="card">
-                    <img class="card__img" src="https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/travelapp/tour_1.jpg" crossorigin="anonymous"/>
-                    <div class="card__heading"><span class= "card__heading--span">Tour trough Bulgaria</span></div>
-                    <div class="card__body">
-                        <div class = "card__difficulty">Difficulty: Medium</div>
-                        <div class = "card__summary">Amazing journey in some of Bulgaria most interesting places </div>
-                        <div class = "card__info">
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/location_icon.png">
-                                <p class = "info__item--text">Sofia,Bulgaria</p>
-                            </div>
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/flag_icon.png">
-                                <p class = "info__item--text">5 Stops</p>
-                            </div>
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/calendar_icon.png">
-                                <p class = "info__item--text">5 Days</p>
-                            </div>
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/group_icon.png">
-                                <p class = "info__item--text">10 People</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "card__footer">
-                        <div class="card__footer--wrapper">
-                            <p class= "card__footer--price"><span class="price--number footer__span--num">€105</span> per Person</p>
-                            <p class= "card__footer--rating"><span class="rating--number footer__span--num">4.5</span> rating (7)</p>
-                            <button class = "btn card__footer--btn">DETAILS</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <img class="card__img" src="https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/travelapp/tour_1.jpg" crossorigin="anonymous"/>
-                    <div class="card__heading"><span class= "card__heading--span">Tour trough Bulgaria</span></div>
-                    <div class="card__body">
-                        <div class = "card__difficulty">Difficulty: Medium</div>
-                        <div class = "card__summary">Amazing journey in some of Bulgaria most interesting places </div>
-                        <div class = "card__info">
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/location_icon.png">
-                                <p class = "info__item--text">Sofia,Bulgaria</p>
-                            </div>
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/flag_icon.png">
-                                <p class = "info__item--text">5 Stops</p>
-                            </div>
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/calendar_icon.png">
-                                <p class = "info__item--text">5 Days</p>
-                            </div>
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/group_icon.png">
-                                <p class = "info__item--text">10 People</p>
+                <% for (let tour of tours){ %>
+                    <div class="card">
+                        <img class="card__img" src="<%= tour.imageCover %>" crossorigin="anonymous"/>
+                        <div class="card__heading"><span class= "card__heading--span"><%= tour.tourName %></span></div>
+                        <div class="card__body">
+                            <div class = "card__difficulty">Difficulty: <%=tour.difficulty %> </div>
+                            <div class = "card__summary"><%= tour.summary %> </div>
+                            <div class = "card__info">
+                                <div class= "card__info--item">
+                                    <img class ="info__item--img"src="/img/location_icon.png">
+                                    <p class = "info__item--text">Sofia,Bulgaria</p>
+                                </div>
+                                <div class= "card__info--item">
+                                    <img class ="info__item--img"src="/img/flag_icon.png">
+                                    <p class = "info__item--text"> <%= tour.locations.length %> Stops</p>
+                                </div>
+                                <div class= "card__info--item">
+                                    <img class ="info__item--img"src="/img/calendar_icon.png">
+                                    <p class = "info__item--text"><%= tour.duration %> Days</p>
+                                </div>
+                                <div class= "card__info--item">
+                                    <img class ="info__item--img"src="/img/group_icon.png">
+                                    <p class = "info__item--text">10 People</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class = "card__footer">
-                        <div class="card__footer--wrapper">
-                            <p class= "card__footer--price"><span class="price--number footer__span--num">€105</span> per Person</p>
-                            <p class= "card__footer--rating"><span class="rating--number footer__span--num">4.5</span> rating(7)</p>
-                            <button class = "btn card__footer--btn">DETAILS</button>
+                        <div class = "card__footer">
+                            <div class="card__footer--wrapper">
+                                <p class= "card__footer--price"><span class="price--number footer__span--num">€<%= tour.price %></span> per Person</p>
+                                <p class= "card__footer--rating"><span class="rating--number footer__span--num"><%= tour.ratingsAvg %></span> rating (<%= tour.ratingsNum %>)</p>
+                                <a class="btn card__footer--btn" href="/tours/<%= tour.id %>"> DETAILS </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </div> 
 
-                <div class="card">
-                    <img class="card__img" src="https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/travelapp/tour_1.jpg" crossorigin="anonymous"/>
-                    <div class="card__heading"><span class= "card__heading--span">Tour trough Bulgaria</span></div>
-                    <div class="card__body">
-                        <div class = "card__difficulty">Difficulty: Medium</div>
-                        <div class = "card__summary">Amazing journey in some of Bulgaria most interesting places </div>
-                        <div class = "card__info">
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/location_icon.png">
-                                <p class = "info__item--text">Sofia,Bulgaria</p>
-                            </div>
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/flag_icon.png">
-                                <p class = "info__item--text">5 Stops</p>
-                            </div>
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/calendar_icon.png">
-                                <p class = "info__item--text">5 Days</p>
-                            </div>
-                            <div class= "card__info--item">
-                                <img class ="info__item--img"src="/img/group_icon.png">
-                                <p class = "info__item--text">10 People</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "card__footer">
-                        <div class="card__footer--wrapper">
-                            <p class= "card__footer--price"><span class="price--number footer__span--num">€105</span> per Person</p>
-                            <p class= "card__footer--rating"><span class="rating--number footer__span--num">4.5</span> rating(7)</p>
-                            <button class = "btn card__footer--btn">DETAILS</button>
-                        </div>
-                    </div>
-                </div>
+                <% } %>
+
                
             </div>            
         </section>

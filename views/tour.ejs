@@ -1,1 +1,113 @@
 <% layout("./layout/boilerplate") %>
+
+<% block("head").append(`<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js' crossorigin="anonymous"> </script>
+<script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js" crossorigin="anonymous"></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' crossorigin="anonymous"/> `) %>
+
+<div class="tour__content">
+    <div class="tour__cover">
+        <div class="tour__heading"><span class= "tour__heading--span"><%= tour.tourName %></span></div>
+        <div class="tour__image__cover--overlay"></div>
+        <img class="tour__image__cover" src="<%= tour.imageCover %>" crossorigin="anonymous"/>
+    </div>
+    <div class="tour__info">
+        <div class="tour__details--wrapper">
+            <h4 class="tour__details--heading details__heading">QUICK FACTS</h4>
+            <div class="tour__details">
+                <div class= "tour__detail--item thumbnail__grid">
+                    <img class ="tour__detail--img grid__img" src="/img/calendar_icon.png">
+                    <p class = "tour__detail--text grid__text"> <span class="tour__detail--span grid__span">NEXT DATE</span> <%= tour.getFormatedDate() %> </p>
+                </div>
+                <div class= "tour__detail--item thumbnail__grid">
+                    <img class ="tour__detail--img grid__img" src="/img/tour_difficulty_icon.png">
+                    <p class = "tour__detail--text grid__text"> <span class="tour__detail--span grid__span">Difficulty</span> <%= tour.difficulty %> </p>
+                </div>
+                <div class= "tour__detail--item thumbnail__grid">
+                    <img class ="tour__detail--img grid__img" src="/img/group_icon.png">
+                    <p class = "tour__detail--text grid__text"> <span class="tour__detail--span grid__span">Participants</span> 10 People</p>
+                </div>
+                <div class= "tour__detail--item thumbnail__grid">
+                    <img class ="tour__detail--img grid__img" src="/img/tour_rating_icon.png">
+                    <p class = "tour__detail--text grid__text"> <span class="tour__detail--span grid__span">Rating</span> <%= tour.ratingsAvg %> / 5 </p>
+                </div>
+            </div>
+            <h4 class="tour__details--heading details__heading">YOUR TOUR GUIDES</h4>
+            <div class="tour__guides">
+
+                <% for (let guide of tour.guides) { %>
+                    <div class= "tour__guide--item thumbnail__grid">
+                        <img class ="tour__guide--img grid__img" src="<%= guide.photo %>" crossorigin="anonymous">
+                        <p class = "tour__guide--text"> <span class="tour__guide--span grid__span">TOUR GUIDE</span> <%= guide.name %> </p>
+                    </div>
+                <% } %>
+
+            </div>   
+        </div>
+        <div class="tour__description">
+            <h3> <%= tour.tourName %> </h3>
+            <p> <%= tour.description %> </p>
+        </div>
+    </div>
+    <div class="tour__gallery">
+        <% for (let i=0; i<tour.images.length && i<3; i++) { %>
+            <img class="tour__image" src="<%= tour.images[i] %>" crossorigin="anonymous">
+        <% } %>
+    </div>
+    <div class="map__container">
+
+        <div id="map" data-coordinates="<%= JSON.stringify(tour.locations) %>"></div>
+
+    </div>
+    <div class="reviews__container">
+        <div class="review__cards--wrapper">
+
+            <% if (reviews.length >0){ %> 
+                <% for (let review of reviews) { %> 
+                    
+                    <div class="review__card">
+                        <div class= "thumbnail__grid">
+
+                            <% if(review.user.photo) { %> 
+                                <img class ="tour__review--img grid__img" src="<%= review.user.photo %>" crossorigin="anonymous">
+                            <% }else{ %> 
+                                <img class ="tour__review--img grid__img" src="/img/default-user.jpg" crossorigin="anonymous">
+                            <% } %> 
+
+                            <p class = "tour__review--author"> <span class="tour__guide--span grid__span"> <%= review.user.name %> </span> </p>
+                        </div>
+                        <p class="tour__review__text">  <%= review.text %> </p>
+                    </div>
+
+                <% } %> 
+            <% } %> 
+           
+        </div>
+        
+    </div>
+
+    <div class="cta__container">
+        <div class= "cta__card">
+            <div class="cta__card--imgs">
+                <div class="cta__img--wrapper cta__img--1">
+                    <img class= "cta__img" src="<%= tour.images[0] %>" crossorigin="anonymous">
+                </div>
+                <div class="cta__img--wrapper cta__img--2">
+                    <img class= "cta__img" src="<%= tour.images[1] %>" crossorigin="anonymous">
+                </div>
+                <div class="cta__img--wrapper cta__img--3">
+                    <img class= "cta__img img__logo--orange" src="/img/logo.jpg">
+                </div>
+            </div>
+            <div class="cta__card--text">
+                <h3>Don't think about it - Join the Adventure!</h3>
+                <p><span class="cta__card--span"> 8 </span> days full of emotion and good vibes!</p>
+            </div>
+            <button id="cta__btn">
+                Book Now !
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/map.js"></script>

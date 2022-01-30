@@ -9,15 +9,15 @@ const AppError = require("../errors/customErrors.js");
  *  independently.
  */
 
-exports.getAll = (Model, useParams = false) => {
+exports.getAll = (Model, options = {}) => {
   return catchAsyncError(async function (req, res) {
     const queryStr = req.query;
 
     // To allow filtering of results by url parameters
     //  ../:tourId/reviews
     let filter = {};
-    if (useParams && req.params)
-      filter = filterObj(req.params, ...useParams);
+    if (options.useParams && req.params)
+      filter = filterObj(req.params, ...options.useParams);
 
     const result = await new SearchFeatures(
       Model.find(filter),
@@ -38,11 +38,11 @@ exports.getAll = (Model, useParams = false) => {
   });
 };
 
-exports.getOne = (Model, populateOpts = false) => {
+exports.getOne = (Model, options = {}) => {
   return catchAsyncError(async function (req, res) {
     const id = req.params.id;
     const query = Model.findById(id);
-    if (populateOpts) query.populate(populateOpts);
+    if (options.populateOpts) query.populate(options.populateOpts);
 
     const result = await query;
 
@@ -55,11 +55,11 @@ exports.getOne = (Model, populateOpts = false) => {
   });
 };
 
-exports.createOne = (Model, filterData = false) => {
+exports.createOne = (Model, options = {}) => {
   return catchAsyncError(async function (req, res) {
     let info;
-    filterData
-      ? (info = filterObj(req.body, ...filterData))
+    options.filterData
+      ? (info = filterObj(req.body, ...options.filterData))
       : (info = req.body);
 
     const result = await Model.create(info);
@@ -72,12 +72,12 @@ exports.createOne = (Model, filterData = false) => {
   });
 };
 
-exports.updateOne = (Model, filterData = false) => {
+exports.updateOne = (Model, options = {}) => {
   return catchAsyncError(async function (req, res) {
     const id = req.params.id;
     let info;
-    filterData
-      ? (info = filterObj(req.body, ...filterData))
+    options.filterData
+      ? (info = filterObj(req.body, ...options.filterData))
       : (info = req.body);
 
     const result = await Model.findByIdAndUpdate(id, info, {

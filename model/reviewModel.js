@@ -45,7 +45,6 @@ reviewSchema.statics.calculateAvgRating = async function (tourId) {
       },
     },
   ]);
-
   return result;
 };
 
@@ -53,7 +52,9 @@ reviewSchema.statics.calculateAvgRating = async function (tourId) {
 reviewSchema.post("save", async function () {
   const result = await this.constructor.calculateAvgRating(this.tour);
   if (!result) return;
-  const { ratingsAvg, ratingsNum } = result[0];
+  let { ratingsAvg, ratingsNum } = result[0];
+  ratingsAvg = parseFloat(ratingsAvg).toFixed(2);
+
   await tourModel.findByIdAndUpdate(this.tour, {
     ratingsAvg,
     ratingsNum,

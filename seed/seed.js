@@ -40,7 +40,7 @@ async function clearDB() {
 
 async function seedDB() {
   try {
-    await TourModel.create(tourData);
+    await TourModel.create(tourData, { validateBeforeSave: false });
     await UserModel.create(userData, { validateBeforeSave: false });
     console.log("Database has been seeded Successfully");
   } catch (err) {

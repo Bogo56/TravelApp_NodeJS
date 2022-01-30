@@ -1,7 +1,11 @@
 body {
   margin: 4rem;
   font-family: "Mochiy Pop P One", sans-serif;
-  background-color: rgb(57, 57, 57);
+  background-image: linear-gradient(
+    90deg,
+    rgb(57, 57, 57) 50%,
+    rgb(73, 73, 75) 100%
+  );
 }
 
 header {
@@ -24,7 +28,8 @@ header {
   justify-content: space-between;
 }
 
-button {
+button,
+.btn {
   background-color: transparent;
   border: 1px solid rgb(253, 253, 253);
   border-radius: 30px;
@@ -32,6 +37,14 @@ button {
   font-size: 0.9rem;
   font-family: inherit;
   padding: 0.8rem 1.5rem;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+button:hover,
+.card__footer--btn:hover {
+  transform: translateY(-7%);
+  box-shadow: 0px 6px 10px rgba(255, 247, 247, 0.192);
+  cursor: pointer;
 }
 
 #login {
@@ -46,13 +59,14 @@ button {
 .content__main {
   display: flex;
   justify-content: center;
-  padding: 6rem 4rem;
+  padding: 6rem 4.5rem;
 }
 
 .cards_list--wrapper {
   display: flex;
-  gap: 4.4rem;
-  justify-content: start;
+  width: 75%;
+  gap: 4rem;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -65,6 +79,7 @@ button {
   overflow: hidden;
   border-radius: 5px;
   position: relative;
+  box-shadow: 8px 3px 15px rgba(187, 186, 185, 0.431);
 }
 
 .card__img {
@@ -72,22 +87,24 @@ button {
   border-radius: 0 0 0 50%;
   z-index: 5;
 }
-.card__heading {
+.card__heading,
+.tour__heading {
   position: absolute;
   font-family: "Source Sans Pro", sans-serif;
   color: white;
   text-transform: uppercase;
   text-align: right;
-  line-height: 2.1rem;
-  top: 10rem;
+  line-height: 2rem;
+  top: 9.5rem;
   right: 1rem;
   z-index: 13;
   width: 15rem;
 }
 
-.card__heading--span {
-  font-weight: 400;
-  font-size: 1.6rem;
+.card__heading--span,
+.tour__heading--span {
+  font-weight: 500;
+  font-size: 1.4rem;
   padding: 0.3rem;
   background-image: linear-gradient(
     160deg,
@@ -98,6 +115,7 @@ button {
 }
 
 .card__body {
+  flex-grow: 1;
   font-family: "Source Sans Pro", sans-serif;
   background-color: rgb(243, 239, 234);
   width: 100%;
@@ -180,8 +198,9 @@ button {
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 3;
-  width: 7rem;
+  width: 4rem;
   font-size: 1rem;
+  font-weight: 500;
   background-image: linear-gradient(
     120deg,
     rgb(248, 172, 58) 30%,
@@ -216,6 +235,11 @@ footer {
   font-weight: 200;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 ul {
   list-style-type: none;
 }
@@ -223,4 +247,417 @@ ul {
 li {
   display: inline;
   margin-left: 0.7rem;
+}
+
+/* LOGIN PAGE STYLES */
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  min-height: inherit;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.form__wrapper {
+  background-image: linear-gradient(
+    120deg,
+    rgba(114, 115, 117, 0.589) 10%,
+    rgba(73, 73, 75, 0.5) 100%
+  );
+  margin-top: 3rem;
+  padding: 3rem;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.login__form--heading {
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.login__form input {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 0.6rem;
+  margin-bottom: 1.2rem;
+  border-radius: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+}
+
+.btn__login {
+  background-image: linear-gradient(
+    120deg,
+    rgb(248, 172, 58) 30%,
+    rgb(248, 172, 8) 100%
+  );
+  border: none;
+  margin-top: 1rem;
+}
+
+/* TOUR PAGE STYLES */
+
+.tour__content {
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.tour__heading {
+  transform: skewY(4.5deg);
+  text-align: center;
+  width: 70%;
+  line-height: 3.3rem;
+  position: absolute;
+  left: 11rem;
+  top: 16rem;
+}
+
+.tour__heading--span {
+  font-size: 3rem;
+}
+
+.tour__cover {
+  position: relative;
+  z-index: 10;
+  transform: skewY(-4.5deg) translateY(-13%);
+  width: 100%;
+  height: 38rem;
+  overflow: hidden;
+}
+
+.tour__image__cover--overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgb(248, 172, 58) 30%,
+    rgb(248, 172, 8) 100%
+  );
+  opacity: 0.6;
+}
+
+.tour__image__cover {
+  width: 100%;
+}
+
+.tour__info {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Source Sans Pro", sans-serif;
+  transform: translateY(-15%);
+}
+
+.tour__details--wrapper {
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    120deg,
+    rgba(114, 115, 117, 0.589) 10%,
+    rgba(73, 73, 75, 0.5) 100%
+  );
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.details__heading {
+  color: rgb(248, 172, 8);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.tour__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail__grid {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  align-items: center;
+}
+
+.tour__detail--img {
+  width: 1.5rem;
+}
+
+.grid__span {
+  margin-right: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.grid__text {
+  text-transform: capitalize;
+}
+
+.tour__guides {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7rem;
+}
+
+.tour__guide--img {
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+
+.tour__description {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 5rem;
+  text-align: justify;
+}
+
+.tour__description h3 {
+  text-transform: uppercase;
+  color: rgb(248, 172, 8);
+  margin-bottom: 2rem;
+}
+
+.tour__gallery {
+  position: relative;
+  display: flex;
+  width: 100%;
+  transform: skewY(-4.5deg) translateY(-49%);
+  z-index: 10;
+}
+
+.tour__image {
+  flex-grow: 1;
+  width: 29rem;
+  z-index: 10;
+}
+
+.map__container {
+  background-image: linear-gradient(
+    120deg,
+    rgba(114, 115, 117, 0.589) 10%,
+    rgba(73, 73, 75, 0.5) 100%
+  );
+  width: 100%;
+  height: 50rem;
+  transform: translateY(-37%);
+  z-index: 5;
+}
+
+#map {
+  overflow: visible;
+  height: 100%;
+}
+
+.map__marker {
+  background-image: url("/img/location_icon.png");
+  background-size: cover;
+  width: 35px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  color: black;
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-image: linear-gradient(
+    180deg,
+    rgb(250, 179, 73) 30%,
+    #f0a503 100%
+  );
+  width: 100%;
+  height: 35rem;
+  transform: skewY(-4.5deg) translateY(-69%);
+  z-index: 5;
+}
+
+.review__cards--wrapper {
+  display: flex;
+  column-gap: 4rem;
+  transform: skewY(4.5deg);
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin-top: 2rem;
+  width: 75rem;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.review__cards--wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.review__card {
+  background-image: linear-gradient(
+    120deg,
+    rgb(114, 115, 117) 10%,
+    rgb(73, 73, 75) 100%
+  );
+  width: 17rem;
+  flex-shrink: 0;
+  padding: 2rem;
+  border-radius: 3px;
+}
+
+.tour__review--img {
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+
+.tour__review__text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.tour__review--author {
+  font-size: 0.9rem;
+}
+
+.cta__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-92%);
+  height: 11.5rem;
+  margin-bottom: -2rem;
+}
+
+.cta__card {
+  background-image: linear-gradient(
+    120deg,
+    rgb(114, 115, 117) 10%,
+    rgb(73, 73, 75) 100%
+  );
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.5fr;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  font-family: inherit;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.cta__card--imgs {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cta__img--wrapper {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.cta__img {
+  width: 9rem;
+}
+
+.img__logo--orange {
+  width: 7rem;
+  object-fit: cover;
+}
+
+.cta__img--1 {
+  position: absolute;
+  left: 0.5rem;
+}
+.cta__img--2 {
+  position: absolute;
+  left: -0.5rem;
+}
+.cta__img--3 {
+  position: absolute;
+  left: -1.5rem;
+}
+
+.cta__card--text h3 {
+  color: rgb(248, 172, 8);
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.cta__card--text p {
+  font-size: 1.2rem;
+  text-align: start;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
+#cta__btn {
+  height: 3rem;
+  width: 11rem;
+  margin-left: 2rem;
+  background-image: linear-gradient(
+    120deg,
+    rgb(248, 172, 58) 30%,
+    rgb(248, 172, 8) 100%
+  );
+  border: none;
+}
+
+/* ERROR MESSAGES */
+
+.error__message {
+  position: fixed;
+  top: -1%;
+  width: 20rem;
+  left: 50%;
+  margin-left: -13rem;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.error__message--Success {
+  background-image: linear-gradient(
+    120deg,
+    rgb(4, 189, 14) 30%,
+    rgb(1, 153, 22) 100%
+  );
+}
+
+.error__message--Failed {
+  background-image: linear-gradient(
+    120deg,
+    rgb(235, 10, 10) 30%,
+    rgb(170, 5, 5) 100%
+  );
 }

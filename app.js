@@ -9,6 +9,7 @@ const sanitizeInput = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const helmet = require("helmet");
 const engine = require("ejs-mate");
+var cookieParser = require("cookie-parser");
 
 const viewRouter = require("./routes/viewRoutes.js");
 const toursRouter = require("./routes/tourRoutes.js");
@@ -35,7 +36,11 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-        "img-src": ["'self'", "data: https:"],
+        "img-src": ["'self' res.cloudinary.com mapbox.com data:"],
+        "script-src": [
+          "'self' *.mapbox.com https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js blob:",
+        ],
+        "default-src": ["'self' *.mapbox.com"],
       },
     },
   })
@@ -50,8 +55,9 @@ const limiter = rateLimit({
 });
 app.use("/api", limiter);
 
-// Reading data from request body
+// Reading data from request body and cookies
 app.use(bodyParser.json({ limit: "10kb" }));
+app.use(cookieParser());
 
 // Protecting against noSQL db injections
 app.use(sanitizeInput());
