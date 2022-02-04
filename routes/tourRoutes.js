@@ -3,6 +3,7 @@ const router = express.Router();
 const tourController = require("../controller/tourController.js");
 const authController = require("../controller/authController.js");
 const reviewRouter = require("./reviewRoutes.js");
+const imgTools = require("../utils/imgTools.js");
 
 // Handle reviews in the reviews router
 router.use("/:tour/reviews", reviewRouter);
@@ -26,6 +27,11 @@ router
   .patch(
     authController.protectRoute,
     authController.restrictTo("admin", "lead_guide"),
+    imgTools.upload.fields([
+      { name: "images", maxCount: 3 },
+      { name: "imageCover", maxCount: 1 },
+    ]),
+    imgTools.resizeImages,
     tourController.updateTour
   )
   .delete(

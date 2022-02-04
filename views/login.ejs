@@ -1,18 +1,17 @@
 <% layout("./layout/boilerplate") %>
 
-<% block("head").append(`<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>`) %>
-
-<div class="form__container">
+<div class="form__container content__container">
     <div class="form__wrapper">
         <h2 class="login__form--heading"> LOG INTO YOUR ACCOUNT</h2>
-        <form class="login__form" id="login__form">
+        <form class="login__form form" id="login__form">
             <label>Email Address</label>
             <input  id="email" type="email">
             <label>Password</label>
             <input  id="password" type="password">
-            <button class="btn btn__login">LOGIN</button>
+            <button class="btn btn__login form__btn">LOGIN</button>
         </form>
     </div>
 </div>
 
-<script src="/js/login.js"></script>
+
+

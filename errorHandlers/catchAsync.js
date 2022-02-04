@@ -1,6 +1,9 @@
-const catchAsyncError = function (fn) {
+const catchAsyncError = function (fn, options = {}) {
   return (req, res, next) => {
-    fn(req, res, next).catch((err) => next(err));
+    fn(req, res, next).catch((err) => {
+      if (options.renderErrOnView) err.onView = true;
+      next(err);
+    });
   };
 };
 

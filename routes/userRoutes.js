@@ -2,19 +2,26 @@ const express = require("express");
 const router = express.Router();
 const userController = require("../controller/userController.js");
 const authController = require("../controller/authController.js");
+const imgTools = require("../utils/imgTools.js");
 
 router
   .post("/signup", authController.signUp)
   .post("/login", authController.logIn)
   .post("/forgetPass", authController.forgetPass)
-  .patch("/resetPass/:token", authController.resetPass);
+  .patch("/resetPass/:token", authController.resetPass)
+  .get("/logout", authController.logOut);
 
 // Protect all routes after this router
 router.use(authController.protectRoute);
 
 router
   .get("/me", userController.setLoggedUser, userController.getUser)
-  .patch("/updateMyInfo", userController.updateLoggedUserInfo)
+  .patch(
+    "/updateMyInfo",
+    imgTools.upload.single("photo"),
+    imgTools.resizeImage,
+    userController.updateLoggedUserInfo
+  )
   .patch("/updateMyPass", authController.updateLoggedUserPass)
   .delete("/deleteMe", userController.deactivateLoggedUser);
 

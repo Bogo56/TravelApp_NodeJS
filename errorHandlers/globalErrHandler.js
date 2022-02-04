@@ -53,7 +53,8 @@ const sendErrPROD = (err, res) => {
 const globalHandler = (err, req, res, next) => {
   let error = { ...err };
   if (process.env.NODE_ENV === "development") {
-    sendErrDEV(err, res);
+    // Check if the error must be rendered on the UI( Not as API response)
+    err.onView ? next(err) : sendErrDEV(err, res);
   }
   if (process.env.NODE_ENV === "production") {
     if (err.name === "ValidationError") error = handleValErr(error);
@@ -64,7 +65,8 @@ const globalHandler = (err, req, res, next) => {
 
     if (err.name === "JsonWebTokenError") error = handleJWTErr(err);
 
-    sendErrPROD(error, res);
+    // Check if the error must be rendered on the UI( Not as API response)
+    err.onView ? next(error) : sendErrPROD(error, res);
   }
 };
 

@@ -36,7 +36,7 @@ exports.updateLoggedUserInfo = catchAsyncError(async function (
 
   res.status(200).json({
     status: "Success",
-    info: "User updated",
+    msg: "User updated",
     result: userData,
   });
 });
@@ -51,6 +51,7 @@ exports.deactivateLoggedUser = catchAsyncError(async function (
 
   res.status(200).json({
     status: "Success",
+    msg: "User Deleted",
     number: req.time,
     data: null,
   });
@@ -62,7 +63,7 @@ exports.createUser = factory.createOne(UserModel, {
   filterData: ["email", "name", "photo", "password", "confirmPass"],
 });
 
-exports.getUser = factory.getOne(UserModel);
+exports.getUser = factory.getOne(UserModel, { selectOpts: "+role" });
 
 exports.updateUser = factory.updateOne(UserModel, {
   filterData: ["email", "name", "photo"],

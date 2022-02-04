@@ -1,0 +1,43 @@
+<div class="account__menu">
+    <div class="account__menu--items">
+
+        <!-- USER MENU -->
+        <div class="menu__items--user menu__items">
+            <div class= "account__detail--item thumbnail__grid">
+                <img class ="account__detail--img grid__img" src="/img/settings.png">
+                <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span">Settings</span></p>
+            </div>
+            <div class= "account__detail--item thumbnail__grid">
+                <img class ="account__detail--img grid__img" src="/img/star.png">
+                <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span">My Reviews</span></p>
+            </div>
+            <div class= "account__detail--item thumbnail__grid">
+                <img class ="account__detail--img grid__img" src="/img/card.png">
+                <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span">Billing</span></p>
+            </div>
+        </div>
+
+        
+<% if (user && user.role==="admin") { %>
+
+        <!-- ADMIN MENU -->
+        <div class="menu__items--admin menu__items">
+            <p class="items__admin--heading">ADMIN</p>
+            <a href="/edit/tours">
+                <div class= "account__detail--item thumbnail__grid" id="manage_tours">
+                    <img class ="account__detail--img grid__img" src="/img/tours.png">
+                    <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span" >Manage Tours</span></p>
+                </div>
+            </a>
+            <div class= "account__detail--item thumbnail__grid">
+                <img class ="account__detail--img grid__img" src="/img/users.png">
+                <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span">Manage Users</span></p>
+            </div>
+        </div>
+
+<% } %>
+
+    </div>
+
+
+</div>

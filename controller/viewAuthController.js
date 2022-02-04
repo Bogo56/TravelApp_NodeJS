@@ -8,34 +8,38 @@ const verifyToken = (token) => {
   return decoded;
 };
 
-exports.verifyLoggedUser = catchAsyncError(async function (
-  req,
-  res,
-  next
-) {
-  // 1.Check for token
-  let token = req.cookies.jwt;
-  if (!token)
-    throw new AppError("Missing access token! Please log in", 401);
-
-  // 2. Verify Token
-  const decoded = verifyToken(token);
-
-  // 3. Check if user still exists
-  const user = await UserModel.findById(decoded.id).select(
-    "+role +lastChanged"
-  );
-  if (!user) throw new AppError("User does not exist anymore!", 401);
-
-  // 4. Check if password has been changed after token was created
-  const isChanged = user.changedPassAfter(decoded);
-
-  if (isChanged)
-    throw new AppError(
-      "Password has been changed! Please log in again!",
-      401
-    );
-
-  // Grant Acess to protected Route
+exports.setLocalUser = function (req, res, next) {
+  // Global variable accessed in the view
+  // Living only for the lifetime of the request
+  res.locals.user = undefined;
   next();
-});
+};
+
+exports.verifyLoggedUser = catchAsyncError(
+  async function (req, res, next) {
+    let token = req.cookies.jwt;
+
+    // 1.Check for token
+    if (token) {
+      // 2. Verify Token
+      const decoded = verifyToken(token);
+
+      // 3. Check if user still exists
+      const user = await UserModel.findById(decoded.id).select(
+        "+role +lastChanged"
+      );
+      if (!user) return next();
+
+      // 4. Check if password has been changed after token was created
+      const isChanged = user.changedPassAfter(decoded);
+
+      if (isChanged) return next();
+
+      // Update variable
+      res.locals.user = user;
+      return next();
+    }
+    return next();
+  },
+  { renderErrOnView: true }
+);

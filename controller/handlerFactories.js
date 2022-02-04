@@ -41,7 +41,7 @@ exports.getAll = (Model, options = {}) => {
 exports.getOne = (Model, options = {}) => {
   return catchAsyncError(async function (req, res) {
     const id = req.params.id;
-    const query = Model.findById(id);
+    const query = Model.findById(id).select(options.selectOpts || "");
     if (options.populateOpts) query.populate(options.populateOpts);
 
     const result = await query;
@@ -88,8 +88,9 @@ exports.updateOne = (Model, options = {}) => {
     if (!result) throw new AppError("No such document ID found", 404);
 
     res.status(200).json({
-      status: result,
+      status: "Success",
       time: req.time,
+      msg: "Document Updated",
       data: result,
     });
   });
@@ -105,6 +106,7 @@ exports.deleteOne = (Model) => {
 
     res.status(200).json({
       status: "Success",
+      msg: "Deleted",
       number: req.time,
       data: null,
     });

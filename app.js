@@ -4,6 +4,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const AppError = require("./errors/customErrors.js");
 const globalErrorHandler = require("./errorHandlers/globalErrHandler.js");
+const viewErrHandler = require("./errorHandlers/viewErrHandler.js");
 const rateLimit = require("express-rate-limit");
 const sanitizeInput = require("express-mongo-sanitize");
 const xss = require("xss-clean");
@@ -73,16 +74,16 @@ app.use((req, res, next) => {
 });
 
 // 2.ROUTES
-app.use("/", viewRouter);
 app.use("/api/v1/tours", toursRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/reviews", reviewRouter);
+app.use("/", viewRouter);
 
 app.all("*", (req, res, next) => {
   const err = new AppError("Could not find the resource specified");
   next(err);
 });
 
-app.use(globalErrorHandler);
+app.use(globalErrorHandler, viewErrHandler);
 
 module.exports = app;

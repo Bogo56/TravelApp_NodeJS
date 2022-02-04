@@ -1,0 +1,39 @@
+<% layout("./layout/account") %>
+
+
+<div class="content__subcontainer hidden">
+    <div class="form__info--wrapper info__wrapper--tour ">
+        <!-- TOUR INFO SECTION -->
+        <div class="form__section">
+            <h2 class="form__content--heading"> UPDATE TOUR INFO</h2>
+            <form class="form__content form" id="tour__form" enctype="multipart/form-data">
+                <label>Tour Name</label>
+                <input  id="tourName" name="tourName" type="text">
+                <label>Price</label>
+                <input  id="price" name="price" type="number">
+                <input type="file" id="imageCover" name="imageCover" accept="image/png,image/jpeg">
+                <input type="file" id="images" name="images" accept="image/png,image/jpeg" multiple>
+                <div class= "thumbnail__grid form__grid">
+                    <img class ="tour__detail--img grid__img" src="/img/uploads.png" crossorigin="anonymous">
+                    <p class = "tour__detail--text grid__text"><label for="imageCover">Change Cover photo</label></p>
+                    <img class ="tour__detail--img grid__img" src="/img/upload.png" crossorigin="anonymous">
+                    <p class = "tour__detail--text grid__text"><label for="images">Upload photos</label></p>
+                </div>
+                <button class="btn btn__save form__btn" id="tour__update--btn">Update Info</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <div class="tour__minigrid" id="tour__minigrid">
+        <div class="minigrid__element">
+            <div class="img--wrapper">
+                <img  src="/img/user_5.jpg">
+            </div>
+            <p>Tour Name</p>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/js/updateTour.js"></script> 

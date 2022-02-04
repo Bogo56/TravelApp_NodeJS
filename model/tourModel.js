@@ -23,7 +23,7 @@ const tourSchema = new Schema(
       required: [true, "Tour must have images"],
       validate: {
         validator: (arr) => Array.isArray(arr) && arr.length === 3,
-        msg: "You must add exactly 3 image urls",
+        msg: "You must add exactly 3 images",
       },
     },
     duration: {

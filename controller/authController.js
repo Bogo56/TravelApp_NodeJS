@@ -21,8 +21,7 @@ const verifyToken = (token) => {
 const sendToken = function (status, result, token, res) {
   const cookieOptions = {
     expires: new Date(
-      Date.now() +
-        process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 60 * 60 * 1000
     ),
     httpOnly: true,
     secure: false,
@@ -34,7 +33,7 @@ const sendToken = function (status, result, token, res) {
 
   return res.status(status).json({
     status: "Success",
-    result: result,
+    msg: result,
   });
 };
 
@@ -45,12 +44,13 @@ exports.protectRoute = catchAsyncError(async function (
   next
 ) {
   // 1.Check for token
-  let token = req.headers.authorization;
+  let token = req.headers.authorization || req.cookies.jwt;
+
   if (!token)
     throw new AppError("Missing access token! Please log in", 401);
 
   // 2. Verify Token
-  token = req.headers.authorization.split(" ")[1];
+  if (token.startsWith("Bearer")) token = token.split(" ")[1];
   const decoded = verifyToken(token);
 
   // 3. Check if user still exists
@@ -116,6 +116,17 @@ exports.logIn = catchAsyncError(async function (req, res) {
   const token = signToken(user.id);
 
   sendToken(200, userData.email, token, res);
+});
+
+exports.logOut = catchAsyncError(async function (req, res) {
+  // Invalidate user token
+  res
+    .status(200)
+    .cookie("jwt", "logedout", {
+      expires: new Date(Date.now() + 1000),
+      httpOnly: true,
+    })
+    .json({ status: "Success", msg: "Log out Successfull" });
 });
 
 exports.forgetPass = catchAsyncError(async function (req, res, next) {

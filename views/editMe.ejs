@@ -1,0 +1,42 @@
+<% layout("./layout/account") %>
+
+<div class="content__subcontainer ">
+    <div class="form__info--wrapper info__wrapper--info">
+
+        <!-- USER INFO SECTION -->
+        <div class="form__section">
+            <h2 class="form__content--heading"> UPDATE YOUR INFO</h2>
+            <form class="form__content form" id="info__form" enctype="multipart/form-data">
+                <label>Name</label>
+                <input  id="name" name="name" type="text">
+                <label>Email adress</label>
+                <input  id="email" name="email" type="email">
+                <input type="file" id="photo" name="photo" accept="image/png,image/jpeg">
+                <div class= "user__profile thumbnail__grid form__grid">
+                    <img class ="user__detail--img grid__img" src="<%= user.photo  %>" crossorigin="anonymous">
+                    <p class = "user__detail--text grid__text"><label for="photo">change photo</label></p>
+                </div>
+                <button class="btn btn__save form__btn">Save Settings</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="form__info--wrapper info__wrapper--user">
+        <!-- USER PASSWORD SECTION -->
+        <div class="form__section">
+            <h2 class="form__content--heading "> CHANGE PASSWORD</h2>
+            <form class="form__content form" id="password__form">
+                <label>Current Password</label>
+                <input  id="oldPass" name="oldPass" type="password">
+                <label>New Password</label>
+                <input  id="password" name="password" type="password">
+                <label>Confirm Password</label>
+                <input  id="confirmPass" name="confirmPass" type="password">
+                <button class="btn btn__save form__btn">Change</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/js/updateUser.js"></script> 

@@ -4,6 +4,7 @@ class AppError extends Error {
     this.name = "AppError";
     this.status = status;
     this.isOperational = true;
+    this.onView = false;
   }
 }
 

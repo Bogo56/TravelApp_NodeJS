@@ -4,9 +4,32 @@
     </a>
     <img class="header__logo" src="/img/logo_small.png">
     <div class="header__nav">
-        <a href="/login">
-            <button id="login" class="btn header--btn">LOG IN</button>
-        </a>
-        <button id="signup" class="btn header--btn">SIGN UP</button>
+
+
+        <% if (user) { %>
+            
+            <button id="logout" class="btn header--btn">LOG OUT</button>
+            
+            <a href="/me">
+                <div class= "user__profile thumbnail__grid">
+                    <img class ="user__detail--img grid__img" src="<%= user.photo || "/img/default-user.jpg" %>" crossorigin="anonymous">
+                    <p class = "user__detail--text grid__text"> <span class="user__detail--span grid__span">Profile</span></p>
+                </div>
+            </a>
+
+        <% } else { %>
+
+            <a href="/login">
+                <button id="login" class="btn header--btn">LOG IN</button>
+            </a>
+            <a href="/sign-up">
+                <button id="signup" class="btn header--btn">SIGN UP</button>
+            </a>     
+        <% } %> 
+
     </div>
+
+    
+
+    
 </header>
