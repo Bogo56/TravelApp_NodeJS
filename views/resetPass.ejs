@@ -1,0 +1,16 @@
+<% layout("./layout/boilerplate") %>
+
+<div class="form__container content__container">
+    <div class="form__wrapper">
+        <h2 class="form--heading"> RESET YOUR PASSWORD</h2>
+        <form class="form__content form" id="reset__form" data-token="<%= token %>">
+            <label>New Password</label>
+            <input  id="password" name="password" type="password">
+            <label>Confirm Password</label>
+            <input  id="confirmPass" name="confirmPass" type="password">
+            <button class="btn form__btn">RESET</button>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="/js/resetPass.js"></script> 

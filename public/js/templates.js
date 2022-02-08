@@ -10,7 +10,7 @@ class Template {
     this.div.insertAdjacentHTML("afterbegin", this._getMarkup(data));
   }
 
-  showForm(id) {
+  hideView(id) {
     document.getElementById("tour__form").dataset.id = id;
     this.containerHide.classList.remove("hidden");
     this.div.classList.add("hidden");

@@ -142,16 +142,15 @@ exports.forgetPass = catchAsyncError(async function (req, res, next) {
   const token = await user.generatePassResetToken();
 
   // 3. Send email with the url for creating a new password
-  data.restoreUrl = `${req.protocol}://${req.hostname}/api/v1/resetPass/${token}`;
+  data.restoreUrl = `${req.protocol}://${req.hostname}:3000/reset-pass/${token}`;
 
-  sendEmail(data);
+  await sendEmail(data);
 
-  sendToken(
-    201,
-    "A restoration link has been send to your email! (valid for 10 min)",
-    token,
-    res
-  );
+  res.status(201).json({
+    status: "Success",
+    resetToken: token,
+    msg: "A restoration link has been send to your email! (valid for 10 min)",
+  });
 });
 
 exports.resetPass = catchAsyncError(async function (req, res, next) {

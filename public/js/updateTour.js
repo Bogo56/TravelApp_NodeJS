@@ -40,11 +40,12 @@ async function loadTours() {
 }
 
 // Event Listeners
+
 tourGrid.addEventListener("click", (e) => {
   if (!["IMG", "P"].includes(e.target.tagName)) return;
 
   const id = e.target.dataset.id;
-  gridView.showForm(id);
+  gridView.hideView(id);
 });
 
 tourForm.addEventListener("submit", async (e) => {

@@ -19,15 +19,14 @@ async function updateUserInfo(data) {
 }
 
 // Sending the updated password to the API
-async function updateUserPass(oldPass, password, confirmPass) {
+async function updateUserPass(data) {
   try {
     const response = await axios({
       method: "PATCH",
       url: "http://localhost:3000/api/v1/users/updateMyPass",
-      data: { oldPass, password, confirmPass },
+      data,
     });
     displayMessage(response.data.status, response.data.msg);
-    location.reload(true);
   } catch (err) {
     displayMessage(err.response.data.status, err.response.data.msg);
   }
@@ -35,9 +34,6 @@ async function updateUserPass(oldPass, password, confirmPass) {
 
 infoForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  // const email = document.getElementById("email").value;
-  // const name = document.getElementById("name").value;
 
   const formData = new FormData(infoForm);
 
@@ -47,9 +43,10 @@ infoForm.addEventListener("submit", (e) => {
 passForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const oldPass = document.getElementById("oldPass").value;
-  const password = document.getElementById("password").value;
-  const confirmPass = document.getElementById("confirmPass").value;
+  const data = {};
+  data.oldPass = document.getElementById("oldPass").value;
+  data.password = document.getElementById("password").value;
+  data.confirmPass = document.getElementById("confirmPass").value;
 
-  updateUserPass(oldPass, password, confirmPass);
+  updateUserPass(data);
 });

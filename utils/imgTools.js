@@ -30,7 +30,7 @@ exports.resizeImage = catchAsyncError(async function (
 
   await sharp(input.buffer)
     .resize(300, 300, {
-      fit: "contain",
+      fit: "cover",
     })
     .jpeg({ quality: 90 })
     .toFile(`public/${filename}`);

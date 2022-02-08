@@ -39,11 +39,33 @@ exports.logIn = catchAsyncError(
   { renderErrOnView: true }
 );
 
+exports.signUp = catchAsyncError(
+  async function (req, res, next) {
+    res.render("signup");
+  },
+  { renderErrOnView: true }
+);
+
 exports.getAccount = catchAsyncError(
   async function (req, res, next) {
     if (!res.locals.user) res.redirect("/");
 
     res.render("editMe");
+  },
+  { renderErrOnView: true }
+);
+
+exports.forgetPassword = catchAsyncError(
+  async function (req, res, next) {
+    res.render("forgetPass");
+  },
+  { renderErrOnView: true }
+);
+
+exports.resetPassword = catchAsyncError(
+  async function (req, res, next) {
+    const token = req.params.token;
+    res.render("resetPass", { token });
   },
   { renderErrOnView: true }
 );
