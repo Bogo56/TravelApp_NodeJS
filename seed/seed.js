@@ -4,6 +4,9 @@ const UserModel = require("../model/userModel.js");
 const ReviewModel = require("../model/reviewModel.js");
 const fs = require("fs");
 
+const text =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur";
+
 require("dotenv").config({
   path: `${__dirname}/../.env`,
 });
@@ -40,8 +43,32 @@ async function clearDB() {
 
 async function seedDB() {
   try {
-    await TourModel.create(tourData, { validateBeforeSave: false });
-    await UserModel.create(userData, { validateBeforeSave: false });
+    // Create Tours
+    const tours = await TourModel.create(tourData, {
+      validateBeforeSave: false,
+    });
+    // Create Users
+    const users = await UserModel.create(userData, {
+      validateBeforeSave: false,
+    });
+    // Filter guides
+    const guides = users
+      .filter((usr) => usr.role === "guide")
+      .map((usr) => usr.id);
+
+    // Loop trough each Tour and add guides and reviews
+    for (let tourId = 0; tourId < 11; tourId++) {
+      await TourModel.findByIdAndUpdate(tours[tourId].id, { guides });
+
+      for (let i = 0; i < 11; i++) {
+        await ReviewModel.create({
+          text,
+          rating: Math.random() * (5 - 3.5) + 3.5,
+          tour: tours[tourId].id,
+          user: users[i].id,
+        });
+      }
+    }
     console.log("Database has been seeded Successfully");
   } catch (err) {
     throw new Error(err.message);

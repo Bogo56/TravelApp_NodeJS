@@ -66,13 +66,7 @@
                     
                     <div class="review__card">
                         <div class= "thumbnail__grid">
-
-                            <% if(review.user.photo) { %> 
-                                <img class ="tour__review--img grid__img" src="<%= review.user.photo %>" crossorigin="anonymous">
-                            <% }else{ %> 
-                                <img class ="tour__review--img grid__img" src="/img/default-user.jpg" crossorigin="anonymous">
-                            <% } %> 
-
+                            <img class ="tour__review--img grid__img" src="<%= review.user.photo %>" crossorigin="anonymous">
                             <p class = "tour__review--author"> <span class="tour__guide--span grid__span"> <%= review.user.name %> </span> </p>
                         </div>
                         <p class="tour__review__text">  <%= review.text %> </p>
@@ -102,7 +96,7 @@
                 <h3>Don't think about it - Join the Adventure!</h3>
                 <p><span class="cta__card--span"> 8 </span> days full of emotion and good vibes!</p>
             </div>
-            <button id="cta__btn">
+            <button id="cta__btn" data-tour-Id="<%= tour.id %>">
                 Book Now !
             </button>
         </div>
@@ -110,4 +104,6 @@
 
 </div>
 
-<script src="/js/map.js"></script>
+<script  src="https://js.stripe.com/v3/" crossorigin="anonymous"></script>
+<script src="/js/map.js" crossorigin="anonymous"></script>
+<script type="module" src="/js/booking.js" crossorigin="anonymous"></script> 

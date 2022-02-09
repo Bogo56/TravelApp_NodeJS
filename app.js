@@ -16,6 +16,8 @@ const viewRouter = require("./routes/viewRoutes.js");
 const toursRouter = require("./routes/tourRoutes.js");
 const userRouter = require("./routes/userRoutes.js");
 const reviewRouter = require("./routes/reviewRoutes.js");
+const bookingRouter = require("./routes/bookingRoutes.js");
+const webHooksRouter = require("./routes/webHooksRoutes.js");
 
 const app = express();
 
@@ -39,11 +41,13 @@ app.use(
         ...helmet.contentSecurityPolicy.getDefaultDirectives(),
         "img-src": ["'self' res.cloudinary.com mapbox.com data:"],
         "script-src": [
-          "'self' *.mapbox.com https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js blob:",
+          "'self' *.mapbox.com https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js blob: *.stripe.com",
         ],
-        "default-src": ["'self' *.mapbox.com"],
+        "connect-src": ["'self' *.stripe.com  *.mapbox.com"],
+        "default-src": ["'self' *.stripe.com  *.mapbox.com"],
       },
     },
+    crossOriginEmbedderPolicy: false,
   })
 );
 
@@ -55,6 +59,9 @@ const limiter = rateLimit({
     "Hourly request rate limit exceeded! Come back in an hour!",
 });
 app.use("/api", limiter);
+
+// Route used before bodyParser.json middleware
+app.use("/webhooks", webHooksRouter);
 
 // Reading data from request body and cookies
 app.use(bodyParser.json({ limit: "10kb" }));
@@ -77,6 +84,7 @@ app.use((req, res, next) => {
 app.use("/api/v1/tours", toursRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/reviews", reviewRouter);
+app.use("/api/v1/bookings", bookingRouter);
 app.use("/", viewRouter);
 
 app.all("*", (req, res, next) => {

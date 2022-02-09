@@ -1,5 +1,6 @@
 const TourModel = require("../model/tourModel.js");
 const ReviewModel = require("../model/reviewModel.js");
+const bookingModel = require("../model/bookingModel.js");
 const AppError = require("../errors/customErrors.js");
 const catchAsyncError = require("../errorHandlers/catchAsync.js");
 
@@ -7,8 +8,9 @@ exports.showOverview = catchAsyncError(
   async function (req, res, next) {
     //  1. Get All Tours
     const tours = await TourModel.find();
+    const heading = "ALL TOURS";
 
-    res.render("overview", { tours });
+    res.render("overview", { tours, heading });
   },
   { renderErrOnView: true }
 );
@@ -79,3 +81,25 @@ exports.updateTour = catchAsyncError(
   },
   { renderErrOnView: true }
 );
+
+exports.showMyBookings = catchAsyncError(
+  async function (req, res, next) {
+    if (!res.locals.user) res.redirect("/");
+
+    //  1. Get All Tours
+    const bookings = await bookingModel.find({ user: res.locals.id });
+    const heading = "MY BOOKINGS";
+
+    res.render("bookings", { tours: bookings, heading });
+  },
+  { renderErrOnView: true }
+);
+
+// Displaying messages after successfull Stripe checkout
+exports.handleStripeMessage = (req, res, next) => {
+  res.locals.stripeMsg = undefined;
+  if (req.query.alert === "booking")
+    res.locals.stripeMsg =
+      "Booking successful! Check your email for confirmation!";
+  next();
+};

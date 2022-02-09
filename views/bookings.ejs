@@ -1,6 +1,6 @@
 <% layout("./layout/boilerplate") %>
 
-    
+    <% if(tours.length > 0) { %>
         <section class="content__main">
             <h2 id="overview_title"> <%= heading %></h2>
             <div class = "cards_list--wrapper">
@@ -49,8 +49,9 @@
 
         </section>
 
-        <% if (stripeMsg) { %>
-            <div id ="stripe_alert" style="visibility:hidden" data-alert-Msg="<%= stripeMsg %>">
-        <% } %> 
-    
-        <script type="module" src="/js/stripeAlert.js"></script> 
+    <% }else{ %>
+        <div class=" content__container">
+            <h1> YOU DON'T HAVE ANY BOOKINGS YET! 😕</h1>
+            <p>🌴  WHAT ARE YOU WAITING FOR ? 🌴 </p>
+        </div>
+    <% } %>

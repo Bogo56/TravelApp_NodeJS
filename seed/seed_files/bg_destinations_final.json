@@ -1,11 +1,11 @@
 [
   {
     "tourName": "Bulgaria – Ancient times, Monasteries and Culture",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_1.jpg",
+    "imageCover": "/img/tours/tour_1.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_1_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_1_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_1_3.jpg"
+      "/img/tours/tour_1_1.jpg",
+      "/img/tours/tour_1_2.jpg",
+      "/img/tours/tour_1_3.jpg"
     ],
     "duration": 8,
     "price": 590,
@@ -57,11 +57,11 @@
   },
   {
     "tourName": "Hiking & culture trek 'The Four Mountains'",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_2.jpg",
+    "imageCover": "/img/tours/tour_2.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_2_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_2_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_2_3.jpg"
+      "/img/tours/tour_2_1.jpg",
+      "/img/tours/tour_2_2.jpg",
+      "/img/tours/tour_2_3.jpg"
     ],
     "duration": 8,
     "price": 665,
@@ -108,11 +108,11 @@
   },
   {
     "tourName": "Bulgaria on budget ",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_3.jpg",
+    "imageCover": "/img/tours/tour_3.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_3_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_3_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_3_3.jpg"
+      "/img/tours/tour_3_1.jpg",
+      "/img/tours/tour_3_2.jpg",
+      "/img/tours/tour_3_3.jpg"
     ],
     "duration": 5,
     "price": 310,
@@ -149,11 +149,11 @@
   },
   {
     "tourName": "Grand tour of Bulgaria",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_4.jpg",
+    "imageCover": "/img/tours/tour_4.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_4_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_4_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_4_3.jpg"
+      "/img/tours/tour_4_1.jpg",
+      "/img/tours/tour_4_2.jpg",
+      "/img/tours/tour_4_3.jpg"
     ],
     "duration": 12,
     "price": 842,
@@ -220,11 +220,11 @@
   },
   {
     "tourName": "Bulgaria in the heritage list of UNESCO",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832971/TravelApp/tour_5.jpg",
+    "imageCover": "/img/tours/tour_5.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_5_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_5_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_5_3.jpg"
+      "/img/tours/tour_5_1.jpg",
+      "/img/tours/tour_5_2.jpg",
+      "/img/tours/tour_5_3.jpg"
     ],
     "duration": 8,
     "price": 960,
@@ -281,11 +281,11 @@
   },
   {
     "tourName": "Classic tour of Bulgaria",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832972/TravelApp/tour_6.jpg",
+    "imageCover": "/img/tours/tour_6.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_6_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_6_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_6_3.jpg"
+      "/img/tours/tour_6_1.jpg",
+      "/img/tours/tour_6_2.jpg",
+      "/img/tours/tour_6_3.jpg"
     ],
     "duration": 7,
     "price": 780,
@@ -342,11 +342,11 @@
   },
   {
     "tourName": "In the footsteps of the Thracian kings",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832974/TravelApp/tour_7.jpg",
+    "imageCover": "/img/tours/tour_7.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_7_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_7_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_7_3.jpg"
+      "/img/tours/tour_7_1.jpg",
+      "/img/tours/tour_7_2.jpg",
+      "/img/tours/tour_7_3.jpg"
     ],
     "duration": 9,
     "price": 895,
@@ -408,11 +408,11 @@
   },
   {
     "tourName": "Along Bulgaria’s mountain and heritage trails",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832973/TravelApp/tour_8.jpg",
+    "imageCover": "/img/tours/tour_8.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_8_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_8_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_8_3.jpg"
+      "/img/tours/tour_8_1.jpg",
+      "/img/tours/tour_8_2.jpg",
+      "/img/tours/tour_8_3.jpg"
     ],
     "duration": 12,
     "price": 830,
@@ -479,11 +479,11 @@
   },
   {
     "tourName": "Rural Bulgaria – Balkan, Rhodopes, Pirin and Rila",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832974/TravelApp/tour_9.jpg",
+    "imageCover": "/img/tours/tour_9.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_9_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_9_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_9_3.jpg"
+      "/img/tours/tour_9_1.jpg",
+      "/img/tours/tour_9_2.jpg",
+      "/img/tours/tour_9_3.jpg"
     ],
     "duration": 8,
     "price": 680,
@@ -525,14 +525,14 @@
   },
   {
     "tourName": "Visit Mystical Places of Bulgaria",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832974/TravelApp/tour_11.jpg",
+    "imageCover": "/img/tours/tour_11.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_11_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_11_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_11_3.jpg"
+      "/img/tours/tour_11_1.jpg",
+      "/img/tours/tour_11_2.jpg",
+      "/img/tours/tour_11_3.jpg"
     ],
     "duration": 5,
-    "hidden": true,
+    "hidden": false,
     "price": 480,
     "summary": "“Visit the very mystical and spiritual places in Bulgaria",
     "description": "“Mystical Bulgaria” is the best choice you can make to experience something spiritual and transcedental. This is a secret tour, available only to the most proven adventurers",
@@ -567,14 +567,14 @@
   },
   {
     "tourName": "Scary Places of Bulgaria",
-    "imageCover": "https://res.cloudinary.com/dawb3psft/image/upload/v1641832974/TravelApp/tour_10.jpg",
+    "imageCover": "/img/tours/tour_10.jpg",
     "images": [
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641833579/TravelApp/tour_images/tour_10_1.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_10_2.jpg",
-      "https://res.cloudinary.com/dawb3psft/image/upload/v1641834381/TravelApp/tour_images/tour_10_3.jpg"
+      "/img/tours/tour_10_1.jpg",
+      "/img/tours/tour_10_2.jpg",
+      "/img/tours/tour_10_3.jpg"
     ],
     "duration": 5,
-    "hidden": true,
+    "hidden": false,
     "price": 480,
     "summary": "“Visit the haunted places in Bulgaria",
     "description": "“Scary Bulgaria” is the best choice you can make if you like adrenaline and testing your nerves. We'll take you to some of the haunted hidden places that many have gone, but fewer ....:D Are you up for the challenge? This is a secret tour, available only to the most proven adventurers",

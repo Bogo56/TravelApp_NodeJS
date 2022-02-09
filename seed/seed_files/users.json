@@ -4,7 +4,7 @@
     "email": "cvetkov.bogomil@gmail.com",
     "role": "admin",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_1.png",
+    "photo": "/img/users/user_1.jpg",
     "password": "AdminPass"
   },
   {
@@ -12,15 +12,15 @@
     "email": "georgi@example.com",
     "role": "user",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_2.png",
+    "photo": "/img/users/user_2.jpg",
     "password": "password"
   },
   {
     "name": "Martin Bachev",
     "email": "marto@example.com",
-    "role": "user",
+    "role": "guide",
     "active": true,
-    "photo": "",
+    "photo": "/img/users/user_14.jpg",
     "password": "password"
   },
   {
@@ -28,7 +28,7 @@
     "email": "ivan@example.com",
     "role": "user",
     "active": true,
-    "photo": "",
+    "photo": "/img/users/user_13.jpg",
     "password": "password"
   },
   {
@@ -36,7 +36,7 @@
     "email": "radin@example.com",
     "role": "user",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_9.png",
+    "photo": "/img/users/user_9.jpg",
     "password": "password"
   },
   {
@@ -44,7 +44,7 @@
     "email": "straho@example.com",
     "role": "user",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_11.png",
+    "photo": "/img/users/user_11.jpg",
     "password": "password"
   },
   {
@@ -52,7 +52,7 @@
     "email": "teo@example.com",
     "role": "user",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_8.png",
+    "photo": "/img/users/user_8.jpg",
     "password": "password"
   },
   {
@@ -60,7 +60,7 @@
     "email": "bojo@example.com",
     "role": "user",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_6.pngv",
+    "photo": "/img/users/user_6.jpg",
     "password": "password"
   },
   {
@@ -68,7 +68,7 @@
     "email": "ogi@example.com",
     "role": "user",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_4.png",
+    "photo": "/img/users/user_4.jpg",
     "password": "password"
   },
   {
@@ -76,7 +76,7 @@
     "email": "solomon@example.com",
     "role": "user",
     "active": true,
-    "photo": "",
+    "photo": "/img/users/default-user.jpg",
     "password": "password"
   },
   {
@@ -84,15 +84,15 @@
     "email": "sveto@example.com",
     "role": "user",
     "active": true,
-    "photo": "",
+    "photo": "/img/users/default-user.jpg",
     "password": "password"
   },
   {
     "name": "Maria Ivanova",
     "email": "maria@example.com",
-    "role": "user",
+    "role": "guide",
     "active": true,
-    "photo": "",
+    "photo": "/img/users/user_12.jpg",
     "password": "password"
   },
   {
@@ -100,15 +100,15 @@
     "email": "eli@example.com",
     "role": "user",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_3.png",
+    "photo": "/img/users/user_3.jpg",
     "password": "password"
   },
   {
     "name": "Genoveva Stoilova",
     "email": "gevi@example.com",
-    "role": "user",
+    "role": "guide",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_5.png",
+    "photo": "/img/users/user_5.jpg",
     "password": "password"
   },
   {
@@ -116,7 +116,7 @@
     "email": "elena@example.com",
     "role": "user",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_7.png",
+    "photo": "/img/users/user_7.jpg",
     "password": "password"
   },
   {
@@ -124,7 +124,7 @@
     "email": "kate@example.com",
     "role": "user",
     "active": true,
-    "photo": "",
+    "photo": "/img/users/default-user.jpg",
     "password": "password"
   },
   {
@@ -132,7 +132,7 @@
     "email": "vani@example.com",
     "role": "user",
     "active": true,
-    "photo": "",
+    "photo": "/img/users/default-user.jpg",
     "password": "password"
   },
   {
@@ -140,7 +140,7 @@
     "email": "kali@example.com",
     "role": "user",
     "active": true,
-    "photo": "",
+    "photo": "/img/users/user_15.jpg",
     "password": "password"
   },
   {
@@ -148,7 +148,7 @@
     "email": "yanka@example.com",
     "role": "user",
     "active": true,
-    "photo": "",
+    "photo": "/img/users/default-user.jpg",
     "password": "password"
   },
   {
@@ -156,7 +156,7 @@
     "email": "mina@example.com",
     "role": "user",
     "active": true,
-    "photo": "https://res.cloudinary.com/dawb3psft/image/upload/v1642351189/TravelApp/users/user_3.png",
+    "photo": "/img/users/user_3.jpg",
     "password": "password"
   }
 ]
