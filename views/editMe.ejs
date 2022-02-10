@@ -8,9 +8,9 @@
             <h2 class="form__content--heading"> UPDATE YOUR INFO</h2>
             <form class="form__content form" id="info__form" enctype="multipart/form-data">
                 <label>Name</label>
-                <input  id="name" name="name" type="text">
+                <input  id="name" name="name" type="text" value="<%= user.name %>">
                 <label>Email adress</label>
-                <input  id="email" name="email" type="email">
+                <input  id="email" name="email" type="email" value="<%= user.email %>" >
                 <input type="file" id="photo" name="photo" accept="image/png,image/jpeg">
                 <div class= "user__profile thumbnail__grid form__grid">
                     <img class ="user__detail--img grid__img" src="<%= user.photo  %>" crossorigin="anonymous">

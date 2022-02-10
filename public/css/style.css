@@ -287,7 +287,8 @@ li {
   color: white;
 }
 
-.form input {
+.form input,
+select {
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -374,6 +375,18 @@ li {
   transition: display 1s;
 }
 
+#back {
+  width: 3.5rem;
+  margin-right: 5rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+#back:hover {
+  transform: scale(1.15);
+  box-shadow: white;
+}
+
 .account__menu--items {
   width: 100%;
   display: flex;
@@ -432,7 +445,8 @@ li {
   width: 100%;
 }
 
-.form__content input {
+.form__content input,
+select {
   width: 100%;
   height: 2.5rem;
 }
@@ -466,7 +480,7 @@ input[type="file"] {
   min-height: 20rem;
 }
 
-.tour__minigrid {
+.minigrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
   margin: 6rem;
@@ -489,11 +503,29 @@ input[type="file"] {
   border-bottom: 3px solid #f0a503;
 }
 
-.tour__minigrid img {
+.minigrid img {
   width: 10rem;
 }
 
-.tour__minigrid p {
+.minigrid .thumbnail {
+  width: 5rem;
+}
+
+.spinner {
+  margin: 10rem auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.minigrid p {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   font-weight: 500;

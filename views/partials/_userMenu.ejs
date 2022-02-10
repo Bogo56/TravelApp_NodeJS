@@ -3,6 +3,12 @@
 
         <!-- USER MENU -->
         <div class="menu__items--user menu__items">
+            <a href="/me">
+                <div class= "account__detail--item thumbnail__grid">
+                    <img class ="account__detail--img grid__img" src="/img/user.png">
+                    <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span">Account</span></p>
+                </div>
+            </a>
             <div class= "account__detail--item thumbnail__grid">
                 <img class ="account__detail--img grid__img" src="/img/settings.png">
                 <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span">Settings</span></p>
@@ -20,21 +26,29 @@
         </div>
 
         
-<% if (user && user.role==="admin") { %>
+<% if (user && (user.role==="admin" || user.role==="lead_guide")) { %>
 
         <!-- ADMIN MENU -->
         <div class="menu__items--admin menu__items">
             <p class="items__admin--heading">ADMIN</p>
+
+            <% if (user.role==="admin" || user.role==="lead_guide") { %>
             <a href="/edit/tours">
                 <div class= "account__detail--item thumbnail__grid" id="manage_tours">
                     <img class ="account__detail--img grid__img" src="/img/tours.png">
                     <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span" >Manage Tours</span></p>
                 </div>
             </a>
-            <div class= "account__detail--item thumbnail__grid">
-                <img class ="account__detail--img grid__img" src="/img/users.png">
-                <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span">Manage Users</span></p>
-            </div>
+            <% } %>
+
+            <% if (user.role==="admin") { %>
+            <a href="/edit/users">
+                <div class= "account__detail--item thumbnail__grid">
+                    <img class ="account__detail--img grid__img" src="/img/users.png">
+                    <p class = "account__detail--text grid__text"> <span class="account__detail--span grid__span">Manage Users</span></p>
+                </div>
+            </a>
+            <% } %>
         </div>
 
 <% } %>

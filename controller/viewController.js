@@ -74,8 +74,21 @@ exports.resetPassword = catchAsyncError(
 
 exports.updateTour = catchAsyncError(
   async function (req, res, next) {
-    if (res.locals.user && res.locals.user.role === "admin")
+    if (
+      res.locals.user &&
+      ["admin", "lead_guide"].includes(res.locals.user.role)
+    )
       res.render("updateTour");
+
+    res.redirect("/");
+  },
+  { renderErrOnView: true }
+);
+
+exports.manageUsers = catchAsyncError(
+  async function (req, res, next) {
+    if (res.locals.user && res.locals.user.role === "admin")
+      res.render("manageUsers");
 
     res.redirect("/");
   },

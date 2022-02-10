@@ -1,0 +1,32 @@
+<% layout("./layout/account") %>
+
+
+<div class="content__subcontainer hidden ">
+    <div class="form__info--wrapper info__wrapper--tour ">
+        <img  id="back" src="/img/arrow.png">
+        <!-- TOUR INFO SECTION -->
+        <div class="form__section">
+            <h2 class="form__content--heading"> MANAGE USER </h2>
+            <form class="form__content form" id="edit__form" enctype="multipart/form-data">
+                <label>Role</label>
+                <select  id="role" name="role">
+                    <option value="user">User</option>
+                    <option value="guide">Guide</option>
+                    <option value="lead_guide">Lead Guide</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <label>Account Status</label>
+                <select  id="active" name="active">
+                    <option value="true">Enabled</option>
+                    <option value="false">Disabled</option>
+                </select>
+                <button class="btn btn__save form__btn" id="update--btn">Update Info</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="minigrid" id="user__minigrid"></div>
+</div>
+
+<script type="module" src="/js/updateDocument.js"></script> 

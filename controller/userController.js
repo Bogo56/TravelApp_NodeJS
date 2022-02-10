@@ -66,7 +66,7 @@ exports.createUser = factory.createOne(UserModel, {
 exports.getUser = factory.getOne(UserModel, { selectOpts: "+role" });
 
 exports.updateUser = factory.updateOne(UserModel, {
-  filterData: ["email", "name", "photo"],
+  filterData: ["email", "name", "photo", "role", "active"],
 });
 
 exports.deleteUser = factory.deleteOne(UserModel);

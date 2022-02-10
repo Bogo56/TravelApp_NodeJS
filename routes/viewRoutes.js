@@ -22,6 +22,8 @@ router.route("/reset-pass/:token").get(viewController.resetPassword);
 router.route("/me").get(viewController.getAccount);
 router.route("/my-bookings").get(viewController.showMyBookings);
 
+// Admin and Tour_guides only
 router.route("/edit/tours").get(viewController.updateTour);
+router.route("/edit/users").get(viewController.manageUsers);
 
 module.exports = router;
