@@ -81,7 +81,7 @@ exports.restrictTo = (...roles) => {
 
     if (!canAccess)
       throw new AppError(
-        "You don't have permission to access this resource",
+        `You must have /${roles}/ role to access this resource!`,
         403
       );
 
@@ -123,7 +123,7 @@ exports.logOut = catchAsyncError(async function (req, res) {
   res
     .status(200)
     .cookie("jwt", "logedout", {
-      expires: new Date(Date.now() + 1000),
+      expires: new Date(Date.now()),
       httpOnly: true,
     })
     .json({ status: "Success", msg: "Log out Successfull" });

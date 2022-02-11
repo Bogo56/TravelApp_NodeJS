@@ -5,7 +5,7 @@ const ReviewModel = require("../model/reviewModel.js");
 const fs = require("fs");
 
 const text =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur";
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ";
 
 require("dotenv").config({
   path: `${__dirname}/../.env`,
@@ -25,6 +25,12 @@ const tourData = JSON.parse(
 const userData = JSON.parse(
   fs.readFileSync(`${__dirname}/seed_files/users.json`)
 );
+
+const superUser = JSON.parse(
+  fs.readFileSync(`${__dirname}/seed_files/superuser.json`)
+);
+
+userData.push(superUser[0]);
 
 const connectDB = async () => {
   await mongoose.connect(dbURL);
@@ -61,12 +67,17 @@ async function seedDB() {
       await TourModel.findByIdAndUpdate(tours[tourId].id, { guides });
 
       for (let i = 0; i < 11; i++) {
-        await ReviewModel.create({
-          text,
-          rating: Math.random() * (5 - 3.5) + 3.5,
-          tour: tours[tourId].id,
-          user: users[i].id,
-        });
+        await ReviewModel.create(
+          [
+            {
+              text,
+              rating: Math.random() * (5 - 3.5) + 3.5,
+              tour: tours[tourId].id,
+              user: users[i].id,
+            },
+          ],
+          { validateBeforeSave: false }
+        );
       }
     }
     console.log("Database has been seeded Successfully");

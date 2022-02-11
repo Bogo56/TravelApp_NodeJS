@@ -51,22 +51,25 @@ const sendErrPROD = (err, res) => {
 };
 
 const globalHandler = (err, req, res, next) => {
-  let error = { ...err };
   if (process.env.NODE_ENV === "development") {
     // Check if the error must be rendered on the UI( Not as API response)
     err.onView ? next(err) : sendErrDEV(err, res);
   }
   if (process.env.NODE_ENV === "production") {
-    if (err.name === "ValidationError") error = handleValErr(error);
+    // Make a copy of the original error before modifying it (looses the onView property)
+    const errCopy = { ...err };
 
-    if (err.name === "CastError") error = handleCastError(err);
+    if (err.name === "ValidationError") err = handleValErr(err);
 
-    if (err.code === 11000) error = handleDuplicate(err);
+    if (err.name === "CastError") err = handleCastError(err);
 
-    if (err.name === "JsonWebTokenError") error = handleJWTErr(err);
+    if (err.code === 11000) err = handleDuplicate(err);
+
+    if (["JsonWebTokenError", "TokenExpiredError"].includes(err.name))
+      err = handleJWTErr(err);
 
     // Check if the error must be rendered on the UI( Not as API response)
-    err.onView ? next(error) : sendErrPROD(error, res);
+    errCopy.onView ? next(err) : sendErrPROD(err, res);
   }
 };
 

@@ -25,7 +25,7 @@ router
     reviewController.updateReview
   )
   .delete(
-    authController.restrictTo("user", "admin"),
+    authController.restrictTo("superadmin"),
     reviewController.deleteReview
   );
 

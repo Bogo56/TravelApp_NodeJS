@@ -4,7 +4,11 @@ const tourModel = require("./tourModel");
 
 const reviewSchema = new Schema(
   {
-    text: String,
+    text: {
+      type: String,
+      maxlength: 280,
+      required: [true, "A review must have a text"],
+    },
     rating: {
       type: Number,
       min: 1,

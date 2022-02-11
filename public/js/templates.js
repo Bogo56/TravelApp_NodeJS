@@ -88,6 +88,8 @@ class UserGridView extends Template {
         <p data-id="${el._id}">${el.name} </p>
        </div>
     `;
+      // Don't include the admin
+      if (el.email === "admin@admin.com") return;
       markup += template;
     });
 

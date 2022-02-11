@@ -12,6 +12,7 @@ async function sendResetLink(email) {
       data: { email },
     });
     displayMessage(response.data.status, response.data.msg);
+    setTimeout(() => (window.location.href = location.origin), 3000);
   } catch (err) {
     displayMessage(err.response.data.status, err.response.data.msg);
   }
@@ -26,6 +27,10 @@ async function resetPass(token, data) {
       data,
     });
     displayMessage(response.data.status, response.data.msg);
+    setTimeout(
+      () => (window.location.href = location.origin + "/me"),
+      2000
+    );
   } catch (err) {
     displayMessage(err.response.data.status, err.response.data.msg);
   }

@@ -34,20 +34,6 @@ exports.showTour = catchAsyncError(
   { renderErrOnView: true }
 );
 
-exports.logIn = catchAsyncError(
-  async function (req, res, next) {
-    res.render("login");
-  },
-  { renderErrOnView: true }
-);
-
-exports.signUp = catchAsyncError(
-  async function (req, res, next) {
-    res.render("signup");
-  },
-  { renderErrOnView: true }
-);
-
 exports.getAccount = catchAsyncError(
   async function (req, res, next) {
     if (!res.locals.user) res.redirect("/");
@@ -57,26 +43,13 @@ exports.getAccount = catchAsyncError(
   { renderErrOnView: true }
 );
 
-exports.forgetPassword = catchAsyncError(
-  async function (req, res, next) {
-    res.render("forgetPass");
-  },
-  { renderErrOnView: true }
-);
-
-exports.resetPassword = catchAsyncError(
-  async function (req, res, next) {
-    const token = req.params.token;
-    res.render("resetPass", { token });
-  },
-  { renderErrOnView: true }
-);
-
 exports.updateTour = catchAsyncError(
   async function (req, res, next) {
     if (
       res.locals.user &&
-      ["admin", "lead_guide"].includes(res.locals.user.role)
+      ["superadmin", "admin", "lead_guide"].includes(
+        res.locals.user.role
+      )
     )
       res.render("updateTour");
 
@@ -87,7 +60,10 @@ exports.updateTour = catchAsyncError(
 
 exports.manageUsers = catchAsyncError(
   async function (req, res, next) {
-    if (res.locals.user && res.locals.user.role === "admin")
+    if (
+      res.locals.user &&
+      ["superadmin", "admin"].includes(res.locals.user.role)
+    )
       res.render("manageUsers");
 
     res.redirect("/");

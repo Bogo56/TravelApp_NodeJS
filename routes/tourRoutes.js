@@ -17,7 +17,12 @@ router
   .get(tourController.getAllTours)
   .post(
     authController.protectRoute,
-    authController.restrictTo("admin", "lead_guide"),
+    imgTools.upload.fields([
+      { name: "images", maxCount: 3 },
+      { name: "imageCover", maxCount: 1 },
+    ]),
+    imgTools.resizeImages,
+    authController.restrictTo("superadmin"),
     tourController.addNewTour
   );
 
@@ -26,17 +31,17 @@ router
   .get(tourController.getTour)
   .patch(
     authController.protectRoute,
-    authController.restrictTo("admin", "lead_guide"),
     imgTools.upload.fields([
       { name: "images", maxCount: 3 },
       { name: "imageCover", maxCount: 1 },
     ]),
     imgTools.resizeImages,
+    authController.restrictTo("superadmin"),
     tourController.updateTour
   )
   .delete(
     authController.protectRoute,
-    authController.restrictTo("admin", "lead_guide"),
+    authController.restrictTo("superadmin"),
     tourController.deleteTour
   );
 

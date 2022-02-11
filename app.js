@@ -85,12 +85,14 @@ app.use("/api/v1/tours", toursRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/reviews", reviewRouter);
 app.use("/api/v1/bookings", bookingRouter);
-app.use("/", viewRouter);
 
-app.all("*", (req, res, next) => {
+app.all("/api*", (req, res, next) => {
   const err = new AppError("Could not find the resource specified");
   next(err);
 });
+
+// Routes on the View ( Frontend )
+app.use("/", viewRouter);
 
 app.use(globalErrorHandler, viewErrHandler);
 

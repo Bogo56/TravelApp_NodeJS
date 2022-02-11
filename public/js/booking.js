@@ -18,7 +18,6 @@ async function beginCheckout(tourId) {
       sessionId: response.data.session.id,
     });
   } catch (err) {
-    console.log(err);
     displayMessage(err.response.data.status, err.response.data.msg);
   }
 }

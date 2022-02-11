@@ -1,7 +1,7 @@
 [
   {
-    "name": "Bogomil Tsvetkov",
-    "email": "cvetkov.bogomil@gmail.com",
+    "name": "Admin",
+    "email": "admin@admin.com",
     "role": "admin",
     "active": true,
     "photo": "/img/users/user_1.jpg",

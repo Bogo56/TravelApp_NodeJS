@@ -52,6 +52,12 @@ exports.resizeImages = catchAsyncError(async function (
   if (input.images) {
     req.body.images = [];
 
+    if (input.images.length < 3)
+      throw new AppError(
+        "Upload exactly 3 images apart from the Cover Image",
+        400
+      );
+
     // Check if all images are valid
     await Promise.all(
       input.images.map(async (el, i) => {
@@ -59,7 +65,7 @@ exports.resizeImages = catchAsyncError(async function (
         const meta = await image.metadata();
         if (meta.width / meta.height < 1.5 || meta.width < 600)
           throw new AppError(
-            "Image must have 2:1 dimensions and width of 600px or more",
+            "Images must have min 1.5:1 dimensions and width of 600px or more",
             400
           );
         return image;
@@ -71,7 +77,7 @@ exports.resizeImages = catchAsyncError(async function (
           const filename = `/img/tours/${req.params.id}_${i}.jpg`;
 
           await img
-            .resize(700, 340, {
+            .resize(1000, 650, {
               fit: "cover",
             })
             .jpeg({ quality: 90 })

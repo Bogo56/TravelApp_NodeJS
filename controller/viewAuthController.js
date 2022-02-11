@@ -43,3 +43,32 @@ exports.verifyLoggedUser = catchAsyncError(
   },
   { renderErrOnView: true }
 );
+
+exports.logIn = catchAsyncError(
+  async function (req, res, next) {
+    res.render("login");
+  },
+  { renderErrOnView: true }
+);
+
+exports.signUp = catchAsyncError(
+  async function (req, res, next) {
+    res.render("signup");
+  },
+  { renderErrOnView: true }
+);
+
+exports.forgetPassword = catchAsyncError(
+  async function (req, res, next) {
+    res.render("forgetPass");
+  },
+  { renderErrOnView: true }
+);
+
+exports.resetPassword = catchAsyncError(
+  async function (req, res, next) {
+    const token = req.params.token;
+    res.render("resetPass", { token });
+  },
+  { renderErrOnView: true }
+);
