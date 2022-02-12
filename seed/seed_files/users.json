@@ -5,7 +5,7 @@
     "role": "admin",
     "active": true,
     "photo": "/img/users/user_1.jpg",
-    "password": "AdminPass"
+    "password": "admin"
   },
   {
     "name": "Georgi Ivanov",
