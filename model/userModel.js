@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const validator = require("validator");
 const cryptoUtils = require("../utils/cryptoUtils.js");
+const AppError = require("../errors/customErrors.js");
 
 const userSchema = new Schema({
   name: {
@@ -28,8 +29,7 @@ const userSchema = new Schema({
   role: {
     type: String,
     default: "user",
-    enum: ["admin", "user", "lead_guide", "guide"],
-    select: false,
+    enum: ["superadmin", "admin", "user", "lead_guide", "guide"],
   },
   active: {
     type: Boolean,
@@ -65,6 +65,24 @@ const userSchema = new Schema({
     select: false,
   },
   resetExpAt: Date,
+});
+
+// Prevent admin roles from being updated
+userSchema.pre("findOneAndUpdate", async function (next) {
+  const user = await this.model.findOne(this.getQuery());
+
+  if (user && ["superadmin", "admin"].includes(user.role))
+    next(new AppError("Can't edit users with admin roles", 403));
+
+  next();
+});
+
+// Prevent admin roles from being updated
+userSchema.pre("save", async function (next) {
+  if (!this.isNew && ["superadmin", "admin"].includes(this.role))
+    next(new AppError("Can't edit users with admin roles", 403));
+
+  next();
 });
 
 // Middleware that hashes the password before saving it

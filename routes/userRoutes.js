@@ -26,7 +26,7 @@ router
   .delete("/deleteMe", userController.deactivateLoggedUser);
 
 // Restrict all routes after this router to admins only
-router.use(authController.restrictTo("admin"));
+router.use(authController.restrictTo("admin", "superadmin"));
 
 router
   .route("/")
