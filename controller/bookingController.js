@@ -3,6 +3,7 @@ const factory = require("./handlerFactories.js");
 const TourModel = require("../model/tourModel.js");
 const Stripe = require("stripe");
 const bookingModel = require("../model/bookingModel.js");
+const AppError = require("../errors/customErrors.js");
 
 exports.createBookingSession = catchAsyncError(async function (
   req,

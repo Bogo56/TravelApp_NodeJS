@@ -7,7 +7,7 @@ const form = document.getElementById("edit__form");
 const tourGrid = document.getElementById("tour__minigrid");
 const userGrid = document.getElementById("user__minigrid");
 
-// Defining global variables
+// Declaring global variables
 const grid = tourGrid || userGrid;
 let gridView;
 let entity;

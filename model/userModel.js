@@ -68,7 +68,7 @@ const userSchema = new Schema({
 });
 
 // Prevent admin roles from being updated
-userSchema.pre("findOneAndUpdate", async function (next) {
+userSchema.pre(/^findOneAnd/, async function (next) {
   const user = await this.model.findOne(this.getQuery());
 
   if (user && ["superadmin", "admin"].includes(user.role))
