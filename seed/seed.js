@@ -26,11 +26,11 @@ const userData = JSON.parse(
   fs.readFileSync(`${__dirname}/seed_files/users.json`)
 );
 
-const superUser = JSON.parse(
-  fs.readFileSync(`${__dirname}/seed_files/superuser.json`)
-);
+// const superUser = JSON.parse(
+//   fs.readFileSync(`${__dirname}/seed_files/superuser.json`)
+// );
 
-userData.push(superUser[0]);
+// userData.push(superUser[0]);
 
 const connectDB = async () => {
   await mongoose.connect(dbURL);
