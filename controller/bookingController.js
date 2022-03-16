@@ -21,6 +21,7 @@ exports.createBookingSession = catchAsyncError(async function (
 
   try {
     session = await stripe.checkout.sessions.create({
+      // Removed :3000 - so it works on the server
       success_url: `${req.protocol}://${req.hostname}/?alert=booking`,
       cancel_url: `${req.protocol}://${req.hostname}/`,
       customer_email: req.user.email,
@@ -33,7 +34,9 @@ exports.createBookingSession = catchAsyncError(async function (
             product_data: {
               name: tour.tourName,
               description: tour.summary,
-              images: [`/img/tours/${tour.imageCover}`],
+              images: [
+                `${req.protocol}://${req.hostname}${tour.imageCover}`,
+              ],
             },
           },
           quantity: 1,
