@@ -34,7 +34,7 @@ exports.createBookingSession = catchAsyncError(async function (
               name: tour.tourName,
               description: tour.summary,
               images: [
-                `${req.protocol}://${req.hostname}:3000${tour.imageCover}`,
+                `${req.protocol}://${req.hostname}/img/tours/${tour.imageCover}`,
               ],
             },
           },
