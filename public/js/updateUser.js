@@ -8,7 +8,7 @@ async function updateUserInfo(data) {
   try {
     const response = await axios({
       method: "PATCH",
-      url: "http://localhost:3000/api/v1/users/updateMyInfo",
+      url: `/api/v1/users/updateMyInfo`,
       data,
     });
     displayMessage(response.data.status, response.data.msg);
@@ -23,7 +23,7 @@ async function updateUserPass(data) {
   try {
     const response = await axios({
       method: "PATCH",
-      url: "http://localhost:3000/api/v1/users/updateMyPass",
+      url: `/api/v1/users/updateMyPass`,
       data,
     });
     displayMessage(response.data.status, response.data.msg);

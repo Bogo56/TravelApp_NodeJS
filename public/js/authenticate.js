@@ -10,7 +10,7 @@ async function logUserIn(email, password) {
   try {
     const response = await axios({
       method: "POST",
-      url: "http://localhost:3000/api/v1/users/login",
+      url: "/api/v1/users/login",
       data: { email, password },
     });
     displayMessage(response.data.status, "Login Successful");
@@ -25,7 +25,7 @@ async function logUserOut() {
   try {
     const response = await axios({
       method: "GET",
-      url: "http://localhost:3000/api/v1/users/logout",
+      url: "/api/v1/users/logout",
     });
     displayMessage(response.data.status, "Logout Successful");
     location.reload(true);

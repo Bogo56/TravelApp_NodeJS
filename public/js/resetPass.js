@@ -8,7 +8,7 @@ async function sendResetLink(email) {
   try {
     const response = await axios({
       method: "POST",
-      url: "http://localhost:3000/api/v1/users/forgetPass",
+      url: `/api/v1/users/forgetPass`,
       data: { email },
     });
     displayMessage(response.data.status, response.data.msg);
@@ -23,7 +23,7 @@ async function resetPass(token, data) {
   try {
     const response = await axios({
       method: "PATCH",
-      url: `http://localhost:3000/api/v1/users/resetPass/${token}`,
+      url: `/api/v1/users/resetPass/${token}`,
       data,
     });
     displayMessage(response.data.status, response.data.msg);

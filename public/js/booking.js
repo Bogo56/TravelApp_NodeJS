@@ -10,7 +10,7 @@ async function beginCheckout(tourId) {
   try {
     const response = await axios({
       method: "POST",
-      url: `http://localhost:3000/api/v1/bookings/create-checkout-session/${tourId}`,
+      url: `/api/v1/bookings/create-checkout-session/${tourId}`,
     });
 
     // Redirect user to payment window

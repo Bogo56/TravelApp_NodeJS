@@ -28,7 +28,7 @@ async function getDocuments() {
   try {
     const response = await axios({
       method: "GET",
-      url: `http://localhost:3000/api/v1/${entity}`,
+      url: `/api/v1/${entity}`,
     });
     return response.data;
   } catch (err) {
@@ -41,7 +41,7 @@ async function updateDocument(id, data) {
   try {
     const response = await axios({
       method: "PATCH",
-      url: `http://localhost:3000/api/v1/${entity}/${id}`,
+      url: `/api/v1/${entity}/${id}`,
       data,
     });
     loadData();
