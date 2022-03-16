@@ -33,9 +33,7 @@ exports.createBookingSession = catchAsyncError(async function (
             product_data: {
               name: tour.tourName,
               description: tour.summary,
-              images: [
-                `${req.protocol}://${req.hostname}/img/tours/${tour.imageCover}`,
-              ],
+              images: [`/img/tours/${tour.imageCover}`],
             },
           },
           quantity: 1,
