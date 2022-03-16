@@ -21,8 +21,8 @@ exports.createBookingSession = catchAsyncError(async function (
 
   try {
     session = await stripe.checkout.sessions.create({
-      success_url: `${req.protocol}://${req.hostname}:3000/?alert=booking`,
-      cancel_url: `${req.protocol}://${req.hostname}:3000/`,
+      success_url: `${req.protocol}://${req.hostname}/?alert=booking`,
+      cancel_url: `${req.protocol}://${req.hostname}/`,
       customer_email: req.user.email,
       client_reference_id: req.user.id,
       line_items: [
