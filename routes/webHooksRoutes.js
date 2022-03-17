@@ -7,7 +7,7 @@ const router = express.Router();
 // It's in a separate file because it needs to parse the raw request body
 router.post(
   "/stripe-webhooks",
-  express.raw({ type: "application/json" }),
+  express.raw({ type: "*/*" }),
   bookingController.receivePaymentHook
 );
 

@@ -71,7 +71,7 @@ exports.receivePaymentHook = catchAsyncError(async function (
 
   try {
     event = stripe.webhooks.constructEvent(
-      req.rawBody,
+      req.body,
       sig,
       endpointSecret
     );
