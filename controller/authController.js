@@ -142,7 +142,7 @@ exports.forgetPass = catchAsyncError(async function (req, res, next) {
   const token = await user.generatePassResetToken();
 
   // 3. Send email with the url for creating a new password
-  data.restoreUrl = `${req.protocol}://${req.hostname}:3000/reset-pass/${token}`;
+  data.restoreUrl = `${req.protocol}://${req.hostname}/reset-pass/${token}`;
 
   await sendEmail(data);
 
