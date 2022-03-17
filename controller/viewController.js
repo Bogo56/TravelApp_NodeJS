@@ -75,8 +75,10 @@ exports.showMyBookings = catchAsyncError(
   async function (req, res, next) {
     if (!res.locals.user) res.redirect("/");
 
-    //  1. Get All Tours
-    const bookings = await bookingModel.find({ user: res.locals.id });
+    //  1. Get All Bookings
+    const bookings = await bookingModel.find({
+      user: res.locals.user.id,
+    });
     const heading = "MY BOOKINGS";
 
     res.render("bookings", { tours: bookings, heading });
