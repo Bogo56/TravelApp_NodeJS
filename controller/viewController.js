@@ -88,7 +88,6 @@ exports.showMyBookings = catchAsyncError(
 exports.handleStripeMessage = (req, res, next) => {
   res.locals.stripeMsg = undefined;
   if (req.query.alert === "booking")
-    res.locals.stripeMsg =
-      "Booking successful! Check your email for confirmation!";
+    res.locals.stripeMsg = "Booking successful! Check your bookings!";
   next();
 };
