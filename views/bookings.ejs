@@ -7,13 +7,13 @@
 
                 <!-- CARDS TEMPLATE -->
 
-                <% for (let tour of tours){ %>
+                <% for (let booking of tours){ %>
                     <div class="card">
-                        <img class="card__img" src="<%= tour.imageCover %>" crossorigin="anonymous"/>
-                        <div class="card__heading"><span class= "card__heading--span"><%= tour.tourName %></span></div>
+                        <img class="card__img" src="<%= booking.tour.imageCover %>" crossorigin="anonymous"/>
+                        <div class="card__heading"><span class= "card__heading--span"><%= booking.tour.tourName %></span></div>
                         <div class="card__body">
-                            <div class = "card__difficulty">Difficulty: <%=tour.difficulty %> </div>
-                            <div class = "card__summary"><%= tour.summary %> </div>
+                            <div class = "card__difficulty">Difficulty: <% booking.tour.difficulty %> </div>
+                            <div class = "card__summary"><%= booking.tour.summary %> </div>
                             <div class = "card__info">
                                 <div class= "card__info--item">
                                     <img class ="info__item--img"src="/img/location_icon.png">
@@ -21,11 +21,11 @@
                                 </div>
                                 <div class= "card__info--item">
                                     <img class ="info__item--img"src="/img/flag_icon.png">
-                                    <p class = "info__item--text"> <%= tour.locations.length %> Stops</p>
+                                    <p class = "info__item--text"> <%= booking.tour.locations.length %> Stops</p>
                                 </div>
                                 <div class= "card__info--item">
                                     <img class ="info__item--img"src="/img/calendar_icon.png">
-                                    <p class = "info__item--text"><%= tour.duration %> Days</p>
+                                    <p class = "info__item--text"><%= booking.tour.duration %> Days</p>
                                 </div>
                                 <div class= "card__info--item">
                                     <img class ="info__item--img"src="/img/group_icon.png">
@@ -35,9 +35,9 @@
                         </div>
                         <div class = "card__footer">
                             <div class="card__footer--wrapper">
-                                <p class= "card__footer--price"><span class="price--number footer__span--num">€<%= tour.price %></span> per Person</p>
-                                <p class= "card__footer--rating"><span class="rating--number footer__span--num"><%= tour.ratingsAvg %></span> rating (<%= tour.ratingsNum %>)</p>
-                                <a class="btn card__footer--btn" href="/tours/<%= tour.id %>"> DETAILS </a>
+                                <p class= "card__footer--price"><span class="price--number footer__span--num">€<%= booking.tour.price %></span> per Person</p>
+                                <p class= "card__footer--rating"><span class="rating--number footer__span--num"><%= booking.tour.ratingsAvg %></span> rating (<%= booking.tour.ratingsNum %>)</p>
+                                <a class="btn card__footer--btn" href="/tours/<%= booking.tour.id %>"> DETAILS </a>
                             </div>
                         </div>
                     </div> 
