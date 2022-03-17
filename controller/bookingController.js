@@ -71,7 +71,7 @@ exports.receivePaymentHook = catchAsyncError(async function (
 
   try {
     event = stripe.webhooks.constructEvent(
-      req.body,
+      req.rawBody,
       sig,
       endpointSecret
     );
@@ -81,7 +81,7 @@ exports.receivePaymentHook = catchAsyncError(async function (
   }
 
   if (event.type === "checkout.session.completed")
-    finishBookingCheckout(event.data.object);
+    await finishBookingCheckout(event.data.object);
 
   res.status(200).json({ received: true });
 });
