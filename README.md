@@ -9,8 +9,8 @@
 <h4 align="center">A personal NodeJS project.</h4>
 
 <p align="center">
-  <a href="https://badgen.net/github/label-issues/nodejs/node/ES%20Modules">
-    <img src="https://badgen.net/github/label-issues/nodejs/node/ES%20Modules"
+  <a href="https://img.shields.io/badge/Made%20with-NodeJS-brightgreen">
+    <img src="https://img.shields.io/badge/Made%20with-NodeJS-brightgreen"
          alt="Gitter">
   </a>
   <a href="https://img.shields.io/badge/Made%20with-JavaScript-yellow"><img src="https://img.shields.io/badge/Made%20with-JavaScript-yellow"></a>
@@ -53,7 +53,10 @@
 ### Additional Libraries and Technologies
 <p>
   <img src="https://img.shields.io/badge/ORM-Mongoose-red?style=for-the-badge">
-  <img src="https://img.shields.io/badge/OS-Ubuntu-orange">
+  <img src="https://img.shields.io/badge/OS-Ubuntu-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Templating-EJS-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Lib-Stripe-blueviolet?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Lib-Bcrypt-green?style=for-the-badge">
 </p>
 
 ## About The Project
