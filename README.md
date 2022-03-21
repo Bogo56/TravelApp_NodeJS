@@ -70,6 +70,8 @@ to enhance my understanding of what a proper API structure is. I really wanted t
 The **main focus of this project is the API** - where I have spent about **75%** of my efforts. I also decided to create a simple front-end (vanilla JS, HTML, CSS) that showcases an
 example of how the API might be consumed.
 
+Most of the webpages are **rendered server-side - EJS templates**. To improve experience and user notifications I have also included some frontend JS - mainly with form submition and admin menu.
+
 I have **deployed the project on my own Ubuntu 18.04 server**, so you can check it out for yourself. You'll find a link below
 
 ## Check out the Project
@@ -101,3 +103,4 @@ https://documenter.getpostman.com/view/16479105/UVsQriWC
 * Priviliges based on user role - lead-guides and admins can modify tours, only admins can modify users, only users can write reviews etc.
 * Forget password functionality. Sends a restoration link on email (expires in 10 min) for password reset.
 * Payment with Stripe - e.g receiving webhooks from strype on successfull payment.
+
