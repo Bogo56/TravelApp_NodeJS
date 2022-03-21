@@ -55,14 +55,45 @@
   <img src="https://img.shields.io/badge/ORM-Mongoose-red?style=for-the-badge">
   <img src="https://img.shields.io/badge/OS-Ubuntu-orange?style=for-the-badge">
   <img src="https://img.shields.io/badge/Templating-EJS-green?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Lib-Stripe-blueviolet?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Lib-Bcrypt-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/API-Stripe-blueviolet?style=for-the-badge">
+  <img src="https://img.shields.io/badge/API-MapBox-blueviolet?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Security-Bcrypt-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Security-Helmet-green?style=for-the-badge">
+    <img src="https://img.shields.io/badge/Security-JWT-green?style=for-the-badge">
 </p>
 
 ## About The Project
-The main motivation behind this project was to greatly improve my ability to build and work with API's. I have already build a couple of API's in Python(with Flask). 
+The main motivation behind this project was to greatly improve my ability in building and working with API's. I have already build a couple of API's in Python(with Flask). 
 Since JavaScript(NodeJS) was a relatively new addition in my tech stack, this was a great opportunity to both upgrade my skills in back-end development with Node and 
 to enhance my understanding of what a proper API structure is. I really wanted to make this project more authentic, so I decided to do a small website for booking tours in Bulgaria.
 
 The **main focus of this project is the API** - where I have spent about **75%** of my efforts. I also decided to create a simple front-end (vanilla JS, HTML, CSS) that showcases an
 example of how the API might be consumed.
+
+I have **deployed the project on my own Ubuntu 18.04 server**, so you can check it out for yourself. You'll find a link below
+
+## Check out the Project
+As I mentioned, I have created an example frontend that uses part of the API's functionality. You can check the project at:
+https://bultravel.bogoapps.site/
+
+There are different types of user roles[user,guide,admin], which have different permissions.
+
+You can log **as an user** with:
+**USERNAME**: "marto@example.com"
+**PASSWORD**: "password"
+OR create an account yourself(No spam - promise :D)
+
+You can log in **as an admin** (access to the admin menu) with:
+**USERNAME**: "admin@admin.com"
+**PASSWORD**: "admin"
+* I have restricted the update operations to superadmins(myself) intentionally - to keep it simple 😅.
+
+I'm using **Stripe in TEST mode** - so just type **4242 4242 4242 4242** as payment card.
+
+## About the API
+### Features
+* Standart CRUD operations for creating and modifying Tours, Users, Bookings, Reviews
+* Filtering on resources - searching, pagination, less than/greater than, exclude/include fields, sort asc/desc, limit number of results etc.
+* Priviliges based on user role - lead-guides and admins can modify tours, only admins can modify users, only users can write reviews etc.
+* Forget password functionality. Sends a restoration link on email (expires in 10 min) for password reset.
+* Payment with Stripe - e.g receiving webhooks from strype on successfull payment.
