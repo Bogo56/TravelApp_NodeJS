@@ -20,6 +20,9 @@
   <a href="https://img.shields.io/github/languages/count/Bogo56/TravelApp_NodeJS?color=f">
     <img src="https://img.shields.io/github/languages/count/Bogo56/TravelApp_NodeJS?color=f">
   </a>
+  <a href="https://badgen.net/github/commits/Bogo56/TravelApp_NodeJS">
+    <img src="https://badgen.net/github/commits/Bogo56/TravelApp_NodeJS">
+  </a>
 </p>
 
 <p align="center">
