@@ -28,7 +28,8 @@
 <p align="center">
   <a href="#about-the-project">About The Project</a> •
   <a href="#check-out-the-project">Check out the Project</a> •
-  <a href="#about-the-api">About the API</a> 
+  <a href="#about-the-api">About the API</a> •
+  <a href="#project-structure">Project Structure</a> 
 </p>
 
 ## Built With
@@ -72,7 +73,7 @@ example of how the API might be consumed.
 
 Most of the webpages are **rendered server-side - EJS templates**. To improve experience and user notifications I have also included some frontend JS - mainly with form submition and admin menu.
 
-I have **deployed the project on my own Ubuntu 18.04 server**, so you can check it out for yourself. You'll find a link below
+I have **deployed the project on my own Ubuntu 18.04 server**, so you can check it out for yourself. I'm using **PM2 as a process manager** to manage app fails and restarts. You'll find a link below
 
 ## Check out the Project
 As I mentioned, I have created an example frontend that uses part of the API's functionality. You can check the project at:
@@ -105,6 +106,9 @@ https://documenter.getpostman.com/view/16479105/UVsQriWC
 * Payment with Stripe - e.g receiving webhooks from strype on successfull payment.
 
 ## Project Structure
+* The ogranization of the project files follows the MVC pattern
+* I created a custom error class. I use it to controll which errors get passed to the client - I don't want to expose the structure of the code to unfriendly outside users by showing some errors not directly connected ot the request, that give unnecessary info about the backend structure.
+
 ```
 📦 TravelApp_NodeJS
 .gitignore
