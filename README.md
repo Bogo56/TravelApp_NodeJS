@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Personal Project - create an API in NodeJS.</h4>
+<h4 align="center">Personal Project - create an API in NodeJS</h4>
 
 <p align="center">
   <a href="https://img.shields.io/badge/Made%20with-NodeJS-brightgreen">
