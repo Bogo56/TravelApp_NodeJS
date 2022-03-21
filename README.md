@@ -91,6 +91,10 @@ You can log in **as an admin** (access to the admin menu) with:
 I'm using **Stripe in TEST mode** - so just type **4242 4242 4242 4242** as payment card.
 
 ## About the API
+### API Reference
+I have used POSTMAN for testing and building the API. I also used it to generate a simple documentation, so you can easily check it's structure. This is the link to the documentation:
+https://documenter.getpostman.com/view/16479105/UVsQriWC
+
 ### Features
 * Standart CRUD operations for creating and modifying Tours, Users, Bookings, Reviews
 * Filtering on resources - searching, pagination, less than/greater than, exclude/include fields, sort asc/desc, limit number of results etc.
