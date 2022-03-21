@@ -24,11 +24,8 @@
 
 <p align="center">
   <a href="#about-the-project">About The Project</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
-  <a href="#license">License</a>
+  <a href="#check-out-the-project">Check out the Project</a> •
+  <a href="#about-the-api">About the API</a> 
 </p>
 
 ## Built With
