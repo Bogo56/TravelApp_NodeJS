@@ -111,13 +111,13 @@ https://documenter.getpostman.com/view/16479105/UVsQriWC
 
 ```
 📦 TravelApp_NodeJS
-.gitignore
-.prettierrc
-README.md
-package-lock.json
-package.json
-app.js
-server.js
+├─ .gitignore
+├─ .prettierrc
+├─ README.md
+├─ package-lock.json
+├─ package.json
+├─ app.js
+├─ server.js
 ├─ controller
 |  ├─ authController.js
 |  ├─ bookingController.js
