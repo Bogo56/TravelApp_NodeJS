@@ -76,7 +76,7 @@ Most of the webpages are **rendered server-side - EJS templates**. To improve ex
 I have **deployed the project on my own Ubuntu 18.04 server**, so you can check it out for yourself. I'm using **PM2 as a process manager** to manage app fails and restarts. You'll find a link below
 
 ## Check out the Project
-As I mentioned, I have created an example frontend that uses part of the API's functionality. You can check the project at:
+As I mentioned, I have created an example frontend that uses part of the API's functionality. You can check the project at( NOT Mobile responsive):
 https://bultravel.bogoapps.site/
 
 There are different types of user roles[user,guide,admin], which have different permissions.
